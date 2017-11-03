@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.Util;
+package com.liu.springboot.quickstart.util;
 
 import org.apache.ibatis.reflection.ArrayUtil;
 

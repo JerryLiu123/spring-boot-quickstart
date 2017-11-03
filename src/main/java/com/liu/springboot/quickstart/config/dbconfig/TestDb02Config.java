@@ -17,28 +17,33 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
+import org.springframework.core.io.support.ResourcePatternResolver;
 
+import com.alibaba.druid.pool.xa.DruidXADataSource;
 import com.atomikos.jdbc.AtomikosDataSourceBean;
 import com.github.pagehelper.PageHelper;
+import com.liu.springboot.quickstart.util.ArrayUtils;
 import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
 
 /**
  * db02 数据库配置
- * @author Jfei
+ * @author 原作者:Jfei
+ * @author 修改:lgh
  *
  */
 
 @ConfigurationProperties(prefix="spring.datasource.db02")
 @Configuration
-@MapperScan(basePackages="com.fei.springboot.dao.db02",sqlSessionTemplateRef="db02SqlSessionTemplate")
+@MapperScan(basePackages="com.liu.springboot.quickstart.dao.db02dao, com.liu.springboot.quickstart.dao.basedao",sqlSessionTemplateRef="sqlSessionTemplate")
 public class TestDb02Config {
 
    private Logger logger = LoggerFactory.getLogger(TestDb02Config.class);
 	
-    private String url;
+   private String url;
 	private String username;
 	private String password;
 
@@ -58,83 +63,105 @@ public class TestDb02Config {
 	private int maxIdleTime;
 	/** test-query 测试SQL **/
 	private String testQuery;
-    
+   /**driverClassName**/
+	private String driverClassName;
+	/**最大执行等待时间**/
+	private int maxWaitTime;
 
-//  配置mapper的扫描，找到所有的mapper.xml映射文件
-    private String mapperLocations;
+// 配置mapper的扫描，找到所有的mapper.xml映射文件
+   private String mapperLocations;
+   private String baseMapperLocations;
 
-//  加载全局的配置文件
-    private String configLocation;
-    
-    
- // 配置数据源
- //	@Primary  //db01那边配置使用Primary了，这里不能再用了，否则报错
- 	@Bean(name = "db02DataSource")
- 	public DataSource db02DataSource() throws SQLException {
- 		
- 		MysqlXADataSource mysqlXaDataSource = new MysqlXADataSource();
- 		mysqlXaDataSource.setUrl(url);
- 		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
- 		mysqlXaDataSource.setPassword(password);
- 		mysqlXaDataSource.setUser(username);
- 		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
- 		
- 		AtomikosDataSourceBean xaDataSource = new AtomikosDataSourceBean();
- 		xaDataSource.setXaDataSource(mysqlXaDataSource);
- 		xaDataSource.setUniqueResourceName("db02DataSource");
+// 加载全局的配置文件
+   private String configLocation;
+   
+   
+// 配置数据源
+	@Primary
+	@Bean(name = "db02DataSource")
+	public DataSource db01DataSource() throws SQLException {
+		
+//		MysqlXADataSource mysqlXaDataSource = new MysqlXADataSource();
+//		mysqlXaDataSource.setUrl(url);
+//		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
+//		mysqlXaDataSource.setPassword(password);
+//		mysqlXaDataSource.setUser(username);
+//		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
+		
+		DruidXADataSource druidXADataSource = new DruidXADataSource();
+		druidXADataSource.setDriverClassName(driverClassName);
+		druidXADataSource.setUrl(url);
+		druidXADataSource.setUsername(username);
+		druidXADataSource.setPassword(password);
+		druidXADataSource.setInitialSize(minPoolSize);
+		druidXADataSource.setMinIdle(0);
+		druidXADataSource.setMaxWait(maxWaitTime);
+		druidXADataSource.setTestOnBorrow(false);
+		druidXADataSource.setTestOnReturn(false);
+		druidXADataSource.setTestWhileIdle(true);
+		druidXADataSource.setRemoveAbandoned(true);
+		druidXADataSource.setRemoveAbandonedTimeout(1800);
+		druidXADataSource.setLogAbandoned(true);
+		
+		AtomikosDataSourceBean xaDataSource = new AtomikosDataSourceBean();
+		xaDataSource.setXaDataSource(druidXADataSource);
+		xaDataSource.setUniqueResourceName("db02DataSource");
 
- 		xaDataSource.setMinPoolSize(minPoolSize);
- 		xaDataSource.setMaxPoolSize(maxPoolSize);
- 		xaDataSource.setMaxLifetime(maxLifetime);
- 		xaDataSource.setBorrowConnectionTimeout(borrowConnectionTimeout);
- 		xaDataSource.setLoginTimeout(loginTimeout);
- 		xaDataSource.setMaintenanceInterval(maintenanceInterval);
- 		xaDataSource.setMaxIdleTime(maxIdleTime);
- 		xaDataSource.setTestQuery(testQuery);
-        
- 		return xaDataSource;
- 	}
-    
- 	
- 	@Bean(name = "db02SqlSessionFactory")
-	public SqlSessionFactory db02SqlSessionFactory(@Qualifier("db02DataSource") DataSource dataSource)
+		xaDataSource.setMinPoolSize(minPoolSize);
+		xaDataSource.setMaxPoolSize(maxPoolSize);
+		xaDataSource.setMaxLifetime(maxLifetime);
+		xaDataSource.setBorrowConnectionTimeout(borrowConnectionTimeout);
+		xaDataSource.setLoginTimeout(loginTimeout);
+		xaDataSource.setMaintenanceInterval(maintenanceInterval);
+		xaDataSource.setMaxIdleTime(maxIdleTime);
+		xaDataSource.setTestQuery(testQuery);
+       
+		return xaDataSource;
+	}
+   
+	
+	@Bean(name = "db02SqlSessionFactory")
+	public SqlSessionFactory db01SqlSessionFactory(@Qualifier("db02DataSource") DataSource dataSource)
 			throws Exception {
 		
 		  try {
-              SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
-              sessionFactoryBean.setDataSource(dataSource);
-              
-              //设置mapper.xml文件所在位置 
-              Resource[] resources = new PathMatchingResourcePatternResolver().getResources(mapperLocations);
-              sessionFactoryBean.setMapperLocations(resources);
-           //设置mybatis-config.xml配置文件位置
-              sessionFactoryBean.setConfigLocation(new DefaultResourceLoader().getResource(configLocation));
+             SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
+             sessionFactoryBean.setDataSource(dataSource);
+             
+             //设置mapper.xml文件所在位置 
+             //Resource[] resources = new PathMatchingResourcePatternResolver().getResources(this.mapperLocations);
+             ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+             Resource[] resources = resolver.getResources(this.mapperLocations);
+             Resource[] resourcesBase = resolver.getResources(this.baseMapperLocations);
+             sessionFactoryBean.setMapperLocations(ArrayUtils.concat(resourcesBase, resources));
+             //设置mybatis-config.xml配置文件位置
+             sessionFactoryBean.setConfigLocation(new DefaultResourceLoader().getResource(this.configLocation));
 
-              //添加分页插件、打印sql插件
-              Interceptor[] plugins = new Interceptor[]{pageHelper(),sqlPrintInterceptor()};
-              sessionFactoryBean.setPlugins(plugins);
-              
-              return sessionFactoryBean.getObject();
-          } catch (IOException e) {
-              logger.error("mybatis resolver db02 mapper*xml is error",e);
-              throw e;
-          } catch (Exception e) {
-              logger.error("mybatis db02sqlSessionFactoryBean create error",e);
-              throw e;
-          }
+             //添加分页插件、打印sql插件
+             Interceptor[] plugins = new Interceptor[]{pageHelper(),sqlPrintInterceptor()};
+             sessionFactoryBean.setPlugins(plugins);
+             
+             return sessionFactoryBean.getObject();
+         } catch (IOException e) {
+             logger.error("mybatis resolver db01 mapper*xml is error",e);
+             throw e;
+         } catch (Exception e) {
+             logger.error("mybatis db01sqlSessionFactoryBean create error",e);
+             throw e;
+         }
 	}
 
-	@Bean(name = "db02SqlSessionTemplate")
-	public SqlSessionTemplate db02SqlSessionTemplate(
-			@Qualifier("db02SqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
-		return new SqlSessionTemplate(sqlSessionFactory);
-	}
- 	
+//	@Bean(name = "db02SqlSessionTemplate")
+//	public SqlSessionTemplate db01SqlSessionTemplate(
+//			@Qualifier("db02SqlSessionFactory") SqlSessionFactory sqlSessionFactory) throws Exception {
+//		return new SqlSessionTemplate(sqlSessionFactory);
+//	}
+	
 	  /**
-     * 分页插件
-     * @param dataSource
-     * @return
-     */
+    * 分页插件
+    * @param dataSource
+    * @return
+    */
  
     public PageHelper pageHelper() {
         PageHelper pageHelper = new PageHelper();
@@ -292,6 +319,16 @@ public class TestDb02Config {
 
 	public void setConfigLocation(String configLocation) {
 		this.configLocation = configLocation;
+	}
+
+
+	public String getBaseMapperLocations() {
+		return baseMapperLocations;
+	}
+
+
+	public void setBaseMapperLocations(String baseMapperLocations) {
+		this.baseMapperLocations = baseMapperLocations;
 	}
 
 }
