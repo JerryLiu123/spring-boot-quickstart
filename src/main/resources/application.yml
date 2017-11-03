@@ -1,0 +1,43 @@
+logging:
+  config: classpath:logback.xml
+  path: d:/logs
+server:
+  port: 8080
+  session-timeout: 60
+
+spring:
+    datasource:
+        db01:
+           url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;characterEncoding=utf-8
+           username: root
+           password: root
+           type: com.alibaba.druid.pool.DruidDataSource
+           driver-class-name: com.mysql.jdbc.Driver
+           minPoolSize: 3
+           maxPoolSize: 25
+           maxLifetime: 20000
+           borrowConnectionTimeout: 30
+           loginTimeout: 30
+           maintenanceInterval: 60
+           test.maxIdleTime: 60
+           testQuery: select 1
+           mapperLocations: classpath:/com/liu/springboot/quickstart/mapper/db01mapper/*.xml
+           baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml
+           configLocation: classpath:/mybatis-config.xml
+        db02:
+           url: jdbc:mysql://192.168.0.213:3306/test?useUnicode=true&amp;characterEncoding=utf-8
+           username: root
+           password: root
+           type: com.alibaba.druid.pool.DruidDataSource
+           driver-class-name: com.mysql.jdbc.Driver
+           minPoolSize: 3
+           maxPoolSize: 25
+           maxLifetime: 20000
+           borrowConnectionTimeout: 30
+           loginTimeout: 30
+           maintenanceInterval: 60
+           test.maxIdleTime: 60
+           testQuery: select 1
+           mapperLocations: classpath:/com/liu/springboot/quickstart/mapper/db02mapper/*.xml
+           baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml
+           configLocation: classpath:/mybatis-config.xml
