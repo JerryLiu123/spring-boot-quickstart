@@ -30,8 +30,8 @@ import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
 
 /**
  * db01 数据库配置
- * @author Jfei
- *
+ * @author 原作者:Jfei
+ * @author 修改:lgh
  */
 
 @ConfigurationProperties(prefix="spring.datasource.db01")
