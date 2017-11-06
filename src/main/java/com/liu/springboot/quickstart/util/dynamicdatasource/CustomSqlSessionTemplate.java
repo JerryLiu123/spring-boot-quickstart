@@ -29,6 +29,11 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.dao.support.PersistenceExceptionTranslator;
 import org.springframework.util.Assert;
 
+/**
+ * 重写某些方法，达到动态设置SqlSessionFactory的效果
+ * @author lgh
+ *
+ */
 public class CustomSqlSessionTemplate extends SqlSessionTemplate {
 
     private Map<Object, SqlSessionFactory> targetSqlSessionFactorys;  
