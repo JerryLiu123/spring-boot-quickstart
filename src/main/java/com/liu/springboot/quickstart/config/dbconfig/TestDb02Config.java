@@ -38,7 +38,8 @@ import com.mysql.jdbc.jdbc2.optional.MysqlXADataSource;
 
 @ConfigurationProperties(prefix="spring.datasource.db02")
 @Configuration
-@MapperScan(basePackages="com.liu.springboot.quickstart.dao.db02dao, com.liu.springboot.quickstart.dao.basedao",sqlSessionTemplateRef="sqlSessionTemplate")
+@MapperScan(basePackages= {"com.liu.springboot.quickstart.dao.db02dao","com.liu.springboot.quickstart.dao.basedao"},sqlSessionTemplateRef="sqlSessionTemplate")
+//@MapperScan(basePackages= {"com.liu.springboot.quickstart.dao.db02dao"}, sqlSessionTemplateRef="db02SqlSessionTemplate")
 public class TestDb02Config {
 
    private Logger logger = LoggerFactory.getLogger(TestDb02Config.class);
@@ -77,31 +78,30 @@ public class TestDb02Config {
    
    
 // 配置数据源
-	@Primary
 	@Bean(name = "db02DataSource")
 	public DataSource db01DataSource() throws SQLException {
 		
-//		MysqlXADataSource mysqlXaDataSource = new MysqlXADataSource();
-//		mysqlXaDataSource.setUrl(url);
-//		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
-//		mysqlXaDataSource.setPassword(password);
-//		mysqlXaDataSource.setUser(username);
-//		mysqlXaDataSource.setPinGlobalTxToPhysicalConnection(true);
-		
-		DruidXADataSource druidXADataSource = new DruidXADataSource();
-		druidXADataSource.setDriverClassName(driverClassName);
+		MysqlXADataSource druidXADataSource = new MysqlXADataSource();
 		druidXADataSource.setUrl(url);
-		druidXADataSource.setUsername(username);
+		druidXADataSource.setPinGlobalTxToPhysicalConnection(true);
 		druidXADataSource.setPassword(password);
-		druidXADataSource.setInitialSize(minPoolSize);
-		druidXADataSource.setMinIdle(0);
-		druidXADataSource.setMaxWait(maxWaitTime);
-		druidXADataSource.setTestOnBorrow(false);
-		druidXADataSource.setTestOnReturn(false);
-		druidXADataSource.setTestWhileIdle(true);
-		druidXADataSource.setRemoveAbandoned(true);
-		druidXADataSource.setRemoveAbandonedTimeout(1800);
-		druidXADataSource.setLogAbandoned(true);
+		druidXADataSource.setUser(username);
+		druidXADataSource.setPinGlobalTxToPhysicalConnection(true);
+		
+//		DruidXADataSource druidXADataSource = new DruidXADataSource();
+//		druidXADataSource.setDriverClassName(driverClassName);
+//		druidXADataSource.setUrl(url);
+//		druidXADataSource.setUsername(username);
+//		druidXADataSource.setPassword(password);
+//		druidXADataSource.setInitialSize(minPoolSize);
+//		druidXADataSource.setMinIdle(0);
+//		druidXADataSource.setMaxWait(maxWaitTime);
+//		druidXADataSource.setTestOnBorrow(false);
+//		druidXADataSource.setTestOnReturn(false);
+//		druidXADataSource.setTestWhileIdle(true);
+//		druidXADataSource.setRemoveAbandoned(true);
+//		druidXADataSource.setRemoveAbandonedTimeout(1800);
+//		druidXADataSource.setLogAbandoned(true);
 		
 		AtomikosDataSourceBean xaDataSource = new AtomikosDataSourceBean();
 		xaDataSource.setXaDataSource(druidXADataSource);

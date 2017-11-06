@@ -1,4 +1,5 @@
 package com.liu.springboot.quickstart.config.dbconfig;
+
 import javax.transaction.TransactionManager;
 import javax.transaction.UserTransaction;
 
@@ -15,7 +16,7 @@ import com.atomikos.icatch.jta.UserTransactionManager;
 /**
  * 事务配置
  * @author Jfei
- *
+ * @author 修改 lgh
  */
 @Configuration
 @EnableTransactionManagement
@@ -38,8 +39,8 @@ public class TransactionManagerConfig {
 	@Bean(name = "transactionManager")
 	@DependsOn({ "userTransaction", "atomikosTransactionManager" })
 	public PlatformTransactionManager transactionManager() throws Throwable {
-		UserTransaction userTransaction = userTransaction();
-		JtaTransactionManager manager = new JtaTransactionManager(userTransaction, atomikosTransactionManager());
+		JtaTransactionManager manager = new JtaTransactionManager(userTransaction(), atomikosTransactionManager());
+		manager.setAllowCustomIsolationLevels(true);
 		return manager;
 	}
 }
