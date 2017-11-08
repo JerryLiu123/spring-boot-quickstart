@@ -41,3 +41,13 @@ spring:
            mapperLocations: classpath:/com/liu/springboot/quickstart/mapper/db02mapper/*.xml
            baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml
            configLocation: classpath:/mybatis-config.xml
+    redis:
+        database: 0
+        host: 192.168.56.2
+        port: 6379  
+        password: 123456
+        maxActive: 10
+        maxWaitTime: 60000
+        maxIdle: 60
+        minIdle: 0
+        timeout: 60

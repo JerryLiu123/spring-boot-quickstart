@@ -20,10 +20,12 @@ public class ExceptionHandler implements ThrowsAdvice {
 	@SuppressWarnings("unused")
 	public void afterThrowing(Exception e) throws Throwable{
 		// TODO Auto-generated method stub
-		LOGGER.info("--------集中异常处理---------");
-        System.out.println("抛出的异常:    " + e.getMessage()+"\n" + e.getCause());  
-        System.out.println("异常详细信息：　" + e.fillInStackTrace());
-        System.out.println(e.getStackTrace().length + "-----" + e.getStackTrace()[0]);
+		LOGGER.info("--------集中异常处理>开始---------");
+		LOGGER.error("抛出的异常:    " + e.getMessage());  
+		LOGGER.error("异常原因:     " + e.getCause());
+		LOGGER.error("堆栈痕迹长度:   " + e.getStackTrace().length);
+		LOGGER.error(e);
+		LOGGER.info("--------集中异常处理>结束---------");
 	}
 	
 	@Pointcut("execution(* com.liu.springboot.quickstart.service..*.*(..))")
