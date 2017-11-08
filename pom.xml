@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.liu.springboot.quickstart</groupId>
   <artifactId>spring-boot-quickstart</artifactId>
-  <packaging>war</packaging>
+  <packaging>jar</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>spring-boot-quickstart Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -35,6 +35,10 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+ 	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+	</dependency>
   	<!-- spring mybatis 依赖开始 -->
 	<dependency>
 	    <groupId>org.mybatis.spring.boot</groupId>
@@ -122,6 +126,14 @@
 		</resource>
 	</resources>
 	<plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.5</version>
+            <configuration>
+                <skipTests>true</skipTests>
+            </configuration>
+        </plugin>
 		<plugin>  
 		    <groupId>org.springframework.boot</groupId>  
 		    <artifactId>spring-boot-maven-plugin</artifactId>  

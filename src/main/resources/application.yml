@@ -6,7 +6,7 @@ server:
   session-timeout: 60
 
 connection: 
-    resources: /resources
+    resources: /webapp/resources
 
 spring:
     datasource:
@@ -56,5 +56,5 @@ spring:
         timeout: 60
     mvc:
         view:
-            prefix: /
-            suffix: .jsp
+            prefix: /webapp
+            suffix: .xhtml
