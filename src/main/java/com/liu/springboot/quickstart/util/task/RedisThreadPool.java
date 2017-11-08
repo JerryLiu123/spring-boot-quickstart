@@ -1,14 +1,7 @@
 package com.liu.springboot.quickstart.util.task;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.util.Date;
-import java.util.List;
-import java.util.UUID;
-import java.util.concurrent.TimeoutException;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +12,6 @@ import org.springframework.data.redis.core.BoundListOperations;
 import org.springframework.data.redis.core.RedisConnectionUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.liu.springboot.quickstart.util.ArrayUtils;
 
 /**
  * 初始化redis任务队列

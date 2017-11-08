@@ -5,6 +5,9 @@ server:
   port: 8080
   session-timeout: 60
 
+connection: 
+    resources: /resources
+
 spring:
     datasource:
         db01:
@@ -51,3 +54,7 @@ spring:
         maxIdle: 60
         minIdle: 0
         timeout: 60
+    mvc:
+        view:
+            prefix: /
+            suffix: .jsp

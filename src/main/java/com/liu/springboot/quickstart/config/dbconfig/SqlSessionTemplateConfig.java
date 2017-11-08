@@ -11,6 +11,12 @@ import org.springframework.context.annotation.Configuration;
 import com.liu.springboot.quickstart.config.ConstantsConfig;
 import com.liu.springboot.quickstart.util.dynamicdatasource.CustomSqlSessionTemplate;
 
+/**
+ * 配置sqlSessionTemplate
+ * 注入不同的sqlSessionFactory实现动态切换数据源
+ * @author lgh
+ *
+ */
 @Configuration
 public class SqlSessionTemplateConfig {
 

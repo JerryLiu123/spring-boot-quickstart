@@ -1,5 +1,7 @@
 <html>
+<link href="${rs }css/index.css" type="text/css" rel="stylesheet">
 <body>
-<h2>Hello World!</h2>
+${rs }
+<h2 class="abc">Hello World!</h2>
 </body>
 </html>
