@@ -9,6 +9,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+import org.springframework.web.servlet.config.annotation.PathMatchConfigurer;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -17,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
 
 @Configuration
-public class WebMvcConfig {
+public class WebMvcConfig extends WebMvcConfigurerAdapter{
 
 	/**
 	 * 设置参数类型转换器(RequestBody)
@@ -67,5 +70,15 @@ public class WebMvcConfig {
 			add("callback");
 		}});
 		return jsonView;
+	}
+	
+	/**
+	 * 增加静态资源映射
+	 */
+	@Override
+	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		// TODO Auto-generated method stub
+		registry.addResourceHandler("/res/**").addResourceLocations("classpath:/res/");
+
 	}
 }

@@ -1,4 +1,6 @@
 .target
 *.class
 *.log
+*.lck
+com.atomikos.spring.jdbc.*
 /target/

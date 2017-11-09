@@ -6,7 +6,7 @@ server:
   session-timeout: 60
 
 connection: 
-    resources: /webapp/resources
+    resources: /res
 
 spring:
     datasource:
@@ -54,7 +54,15 @@ spring:
         maxIdle: 60
         minIdle: 0
         timeout: 60
-    mvc:
-        view:
-            prefix: /webapp
-            suffix: .xhtml
+    resources:
+        static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/webapp/
+        chain:
+            strategy:
+                content:
+                    enabled: true
+                    paths: /**
+    thymeleaf:
+        prefix: classpath:/tem/
+        suffix: .html
+        mode: HTML5
+        encoding: UTF-8
