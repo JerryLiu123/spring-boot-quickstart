@@ -31,7 +31,7 @@ public class Application extends SpringBootServletInitializer implements Embedde
 		// TODO Auto-generated method stub
 		return builder.sources(Application.class);  
 	}
-
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(Application.class, args);

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix="connection")
 public class ConstantsConfig {
-
+	/**静态文件目录**/
 	public static String resources = "";
 	
 	/**数据源名称**/
