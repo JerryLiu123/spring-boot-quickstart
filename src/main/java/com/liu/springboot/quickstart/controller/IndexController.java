@@ -1,5 +1,6 @@
 package com.liu.springboot.quickstart.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,16 +22,18 @@ public class IndexController {
 	@RequestMapping(value="/index")
 	public String index(HttpServletRequest req,
 			HttpServletResponse resp, 
-			Map<String, Object> dataMap) {
+			Map<String, Object> dataMap) throws Exception {
 		dataMap.put("rs", ConstantsConfig.resources+"/");
-		return "index";
+		throw new Exception("测试异常全局拦截");
+		//return "index";
 	}
 	
 	@ResponseBody
 	@RequestMapping(value="/json")
 	public Map<String, Object> getJson(){
 		Map<String, Object> value = new HashMap<String, Object>();
-		value.put("123", 1243);
+		value.put("123", "测试json");
+		value.put("456", new ArrayList<String>());
 		return value;
 	}
 }
