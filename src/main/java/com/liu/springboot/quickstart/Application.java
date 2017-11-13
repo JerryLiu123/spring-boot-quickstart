@@ -1,5 +1,6 @@
 package com.liu.springboot.quickstart;
 
+import org.apache.log4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,6 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
 
+	private static Logger logger = Logger.getLogger(Application.class);
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer arg0) {
 		// TODO Auto-generated method stub
@@ -35,6 +37,7 @@ public class Application extends SpringBootServletInitializer implements Embedde
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(Application.class, args);
+		logger.info("=====spring boot 启动成功!!!====");
 	}
 
 }

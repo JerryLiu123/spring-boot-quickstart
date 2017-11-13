@@ -33,7 +33,7 @@ public class IndexController {
 	public Map<String, Object> getJson(){
 		Map<String, Object> value = new HashMap<String, Object>();
 		value.put("123", "测试json");
-		value.put("456", new ArrayList<String>());
+		value.put("456", null);
 		return value;
 	}
 }
