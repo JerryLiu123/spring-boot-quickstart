@@ -35,14 +35,14 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 			add(MediaType.valueOf("text/html;charset=UTF-8"));
 		}});
 		ObjectMapper objectMapper = httpMessageConverter.getObjectMapper();
-	     //null显示为""字符串
-        objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>() {
-	        @Override
-	        public void serialize(Object value, JsonGenerator jgen, SerializerProvider provider) throws IOException {
-	            jgen.writeString("");
-	        }
-	    });
-        httpMessageConverter.setObjectMapper(objectMapper);
+		//null显示为""字符串
+		objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>() {
+			@Override
+			public void serialize(Object value, JsonGenerator jgen, SerializerProvider provider) throws IOException {
+				jgen.writeString("");
+			}
+		});
+		httpMessageConverter.setObjectMapper(objectMapper);
 		return httpMessageConverter;
 	}
 	

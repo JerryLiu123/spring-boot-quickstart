@@ -1,6 +1,6 @@
 package com.liu.springboot.quickstart.service.impl;
 
-import java.util.List;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,17 +30,24 @@ public class RedisServiceImpl implements RedisService {
 		}
 		return a;
 	}
+	
 	@ParameterNotBlank
 	@Override
-	public long delForValue(List<String> keys) throws NullPointerException{
+	public void delForValue(Set<String> keys) throws Exception{
 		// TODO Auto-generated method stub
 		redisTemplate.delete(keys);
-		return 1L;
+	}
+	
+	@ParameterNotBlank
+	@Override
+	public void delForValue(String key) throws Exception {
+		// TODO Auto-generated method stub
+		redisTemplate.delete(key);
 	}
 
 	@ParameterNotBlank
 	@Override
-	public void set(String key, Object value, long liveTime) throws NullPointerException{
+	public void set(String key, Object value, long liveTime) throws Exception{
 		// TODO Auto-generated method stub
 		if(liveTime > 0) {
 			redisTemplate.opsForValue().set(key, value, liveTime, TimeUnit.SECONDS);
@@ -51,7 +58,7 @@ public class RedisServiceImpl implements RedisService {
 	
 	@ParameterNotBlank
 	@Override
-	public void setByOffset(String key, Object value, long offset) throws NullPointerException{
+	public void setByOffset(String key, Object value, long offset) throws Exception{
 		// TODO Auto-generated method stub
 		if(offset > 0) {
 			redisTemplate.opsForValue().set(key, value, offset);

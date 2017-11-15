@@ -20,20 +20,22 @@ public class RedisTest extends BaseTest {
 	@Test
 	public void takTest() {
 		try {
-			
-			Map<String, String> map = new HashMap<String, String>();
-			map.put("456", "456");
-			map.put("789", "789");
-			redisService.set("123", map);
 			System.out.println("放入队列开始");
 			for(int i=0; i<5;i++) {
 				redisThreadPool.pushFromTail(new TestTaskWork(i));
 			}
 			System.out.println("放入队列结束");
-			System.err.println(redisService.exists("123"));
-			System.err.println(redisService.get("123"));
-			System.err.println(redisService.delForValue(new ArrayList<String>() {{add("123");}}));
-			System.err.println(redisService.exists("123"));
+			
+			Map<String, String> map = new HashMap<String, String>();
+			map.put("456", "456");
+			map.put("789", "789");
+			System.err.println("放入redis信息>>>");
+			redisService.set("123", map);
+			System.err.println("判断redis信息>>>"+redisService.exists("123"));
+			System.err.println("获得redis信息>>>"+redisService.get("123"));
+			System.err.println("删除redis信息>>>");
+			redisService.delForValue("123");
+			System.err.println("判断redis信息>>>"+redisService.exists("123"));
 			Thread.sleep(15000);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

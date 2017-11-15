@@ -1,6 +1,6 @@
 package com.liu.springboot.quickstart.service;
 
-import java.util.List;
+import java.util.Set;
 
 /**
  * redis 操作，此处方法只是针对 redis 中String数据结构
@@ -10,13 +10,18 @@ import java.util.List;
 public interface  RedisService {
 
 	/**
-	 * 删除key
+	 * 按照key删除redis中的值(批量删除)
 	 * @param keys
-	 * @return
-	 * @throws NullPointerException
+	 * @throws Exception
 	 */
-    public abstract long delForValue(List<String> keys) throws NullPointerException;
-
+    public abstract void delForValue(Set<String> keys) throws Exception;
+    
+    /**
+     * 按照key删除redis中的值(单个删除)
+     * @param key
+     * @throws Exception
+     */
+    public abstract void delForValue(String key) throws Exception;
 
     /**
      * 添加key value 并且设置存活时间
@@ -25,9 +30,9 @@ public interface  RedisService {
      * @param value
      * @param liveTime
      *            单位秒
-     * @throws NullPointerException
+     * @throws Exception
      */
-    public abstract void set(String key, Object value, long liveTime) throws NullPointerException;
+    public abstract void set(String key, Object value, long liveTime) throws Exception;
 
     /**
      * 添加key value
@@ -42,9 +47,9 @@ public interface  RedisService {
      * @param key
      * @param value
      * @param offset
-     * @throws NullPointerException
+     * @throws Exception
      */
-    public abstract void setByOffset(String key, Object value, long offset) throws NullPointerException;
+    public abstract void setByOffset(String key, Object value, long offset) throws Exception;
 
     /**
      * 获取redis value (String)
