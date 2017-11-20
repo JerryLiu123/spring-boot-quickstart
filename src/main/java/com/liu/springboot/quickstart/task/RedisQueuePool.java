@@ -1,17 +1,22 @@
-package com.liu.springboot.quickstart.util.task;
+package com.liu.springboot.quickstart.task;
 
 import java.util.Date;
+import java.util.concurrent.Executor;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.BoundListOperations;
 import org.springframework.data.redis.core.RedisConnectionUtils;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
+
+import com.liu.springboot.quickstart.config.ConstantsConfig;
 
 /**
  * 初始化redis任务队列
@@ -19,11 +24,14 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class RedisThreadPool implements InitializingBean{
-	private static Logger logger = Logger.getLogger(RedisThreadPool.class);
+@DependsOn({"taskPool"})//bean依赖关系(本Bean依赖于taskPool)
+public class RedisQueuePool implements InitializingBean{
+	private static Logger logger = Logger.getLogger(RedisQueuePool.class);
 
 	@Autowired
-    private @Qualifier("redisTemplate")RedisTemplate redisTemplateTask;  
+    private @Qualifier("redisTemplate")RedisTemplate redisTemplateTask;
+	@Autowired
+	private @Qualifier("taskPool")ThreadPoolTaskExecutor taskPool;
     private String key = "springbootquickstart";  
     //private int cap = Short.MAX_VALUE;//最大阻塞的容量，超过容量将会导致清空旧数据  
     private byte[] rawKey;  
@@ -33,9 +41,9 @@ public class RedisThreadPool implements InitializingBean{
     //感觉hash主要用于对于对象的修改时比较有用，但是在本实例中对象并不需要修改，所以就没有使用hash
     //private BoundHashOperations<String, byte[], Task> hashOperations;
       
-    private boolean isClosed;  
+    private boolean isClosed = false;  
     /* 默认池中线程数 */
-    private int worker_num = 5;
+    private int worker_num = ConstantsConfig.redsWorkSize;
     /* 池中的所有线程 */
     public PoolWorker[] workers;
       
@@ -53,8 +61,11 @@ public class RedisThreadPool implements InitializingBean{
         listOperations = redisTemplateTask.boundListOps(key); 
         //hashOperations = redisTemplate.boundHashOps(key);
         workers = new PoolWorker[worker_num];
+        PoolWorker a = null;
         for (int i = 0; i < workers.length; i++) {
-            workers[i] = new PoolWorker(i);
+        	a = new PoolWorker(i);
+        	taskPool.execute(a);
+            workers[i] = a;
         }
 	}
     /**
@@ -114,16 +125,14 @@ public class RedisThreadPool implements InitializingBean{
                 workers[i].stopWorker();
                 workers[i] = null;
             }
-            RedisConnectionUtils.releaseConnection(connection, factory); 
     	}
     }
 
     /**
     * 池中工作线程
-    * 
     * @author lgh
     */
-    private class PoolWorker extends Thread {
+    private class PoolWorker implements Runnable {
         private int index = -1;
         /* 该工作线程是否有效 */
         private boolean isRunning = true;
@@ -132,7 +141,7 @@ public class RedisThreadPool implements InitializingBean{
 
         public PoolWorker(int index) {
             this.index = index;
-            start();
+            //start();
         }
 
         public void stopWorker() {
@@ -145,7 +154,9 @@ public class RedisThreadPool implements InitializingBean{
         /**
         * 循环执行任务
         */
+        @Override
         public void run() {
+        	logger.info("reids队列工作线程>>"+this.index+"<<开始工作!!!");
             while (isRunning) {
                 Task r = null;
                 synchronized (listOperations) {
@@ -159,18 +170,6 @@ public class RedisThreadPool implements InitializingBean{
                     }
                     /* 取出任务执行 */
                     try {
-                    	//反序列话对象
-//                    	ByteArrayInputStream in = new ByteArrayInputStream(takeFromHead());
-//                    	if(in != null) {
-//                         	ObjectInputStream sIn = new ObjectInputStream(in);
-//                        	Object ob = sIn.readObject();
-//    						if(Task.class.isAssignableFrom(ob.getClass())) {
-//    							r = (Task) ob;
-//    						}else {
-//    							logger.error(ob.getClass().getName()+"--不是此线程池可以执行的方法");
-//    							r = null;
-//    						}
-//                    	}
                     	r = takeFromHead();
 					}catch (Exception e) {
 						// TODO Auto-generated catch block
@@ -196,15 +195,16 @@ public class RedisThreadPool implements InitializingBean{
                     r = null;
                 }
             }
+            logger.info("reids队列工作线程>>"+this.index+"<<!!!");
         }
     }
     public void setKey(String key) {  
         this.key = key;  
     }
-	public int getWorker_num() {
-		return worker_num;
-	}
-	public void setWorker_num(int worker_num) {
-		this.worker_num = worker_num;
-	}
+    public int getWorker_num() {
+        return worker_num;
+    }
+    public void setWorker_num(int worker_num) {
+        this.worker_num = worker_num;
+    }
 }

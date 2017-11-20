@@ -6,23 +6,24 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.liu.springboot.quickstart.service.RedisService;
+import com.liu.springboot.quickstart.task.RedisQueuePool;
+import com.liu.springboot.quickstart.task.work.TestTaskWork;
 import com.liu.springboot.quickstart.util.ArrayUtils;
-import com.liu.springboot.quickstart.util.task.RedisThreadPool;
-import com.liu.springboot.quickstart.util.task.work.TestTaskWork;
 
 public class RedisTest extends BaseTest {
 
 	@Autowired
-	private RedisThreadPool redisThreadPool;
+	private RedisQueuePool redisQueuePool;
 	@Autowired
 	private RedisService redisService;
 	
 	@Test
 	public void takTest() {
 		try {
+		    Thread.sleep(15000);
 			System.out.println("放入队列开始");
 			for(int i=0; i<5;i++) {
-				redisThreadPool.pushFromTail(new TestTaskWork(i));
+				redisQueuePool.pushFromTail(new TestTaskWork(i));
 			}
 			System.out.println("放入队列结束");
 			

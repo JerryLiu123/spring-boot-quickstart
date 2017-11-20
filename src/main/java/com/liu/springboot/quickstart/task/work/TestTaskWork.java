@@ -1,6 +1,6 @@
-package com.liu.springboot.quickstart.util.task.work;
+package com.liu.springboot.quickstart.task.work;
 
-import com.liu.springboot.quickstart.util.task.Task;
+import com.liu.springboot.quickstart.task.Task;
 
 public class TestTaskWork extends Task {
 
@@ -15,13 +15,6 @@ public class TestTaskWork extends Task {
 	
 	public TestTaskWork() {
 		super();
-	}
-
-
-	@Override
-	public Task[] taskCore() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

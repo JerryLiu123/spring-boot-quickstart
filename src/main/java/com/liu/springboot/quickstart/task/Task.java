@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.util.task;
+package com.liu.springboot.quickstart.task;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -32,13 +32,6 @@ public abstract class Task implements Runnable, Serializable {
     * 任务执行入口
     */
     public abstract void run();
-
-    /**
-    * 所有任务的核心 所以特别的业务逻辑执行之处
-    * 
-    * @throws Exception
-    */
-    public abstract Task[] taskCore() throws Exception;
 
     /**
     * 是否需要立即执行
