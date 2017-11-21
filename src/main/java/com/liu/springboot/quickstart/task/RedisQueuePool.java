@@ -38,7 +38,7 @@ public class RedisQueuePool implements InitializingBean{
     private byte[] rawKey;  
     private RedisConnectionFactory factory;  
     private RedisConnection connection;//for blocking  
-    private BoundListOperations<String, Task> listOperations;//noblocking
+    private BoundListOperations<String, IQueueTask> listOperations;//noblocking
     //感觉hash主要用于对于对象的修改时比较有用，但是在本实例中对象并不需要修改，所以就没有使用hash
     //private BoundHashOperations<String, byte[], Task> hashOperations;
       
@@ -55,7 +55,7 @@ public class RedisQueuePool implements InitializingBean{
 	@SuppressWarnings("unchecked")
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
-		logger.info("初始化"+worker_num+"个线程池");
+		logger.info("初始化"+worker_num+"个队列工作线程");
         factory = redisTemplateTask.getConnectionFactory();  
         connection = RedisConnectionUtils.getConnection(factory);  
         rawKey = redisTemplateTask.getKeySerializer().serialize(key);  
@@ -87,7 +87,7 @@ public class RedisQueuePool implements InitializingBean{
      * 从队列的头，插入 
      * @throws Exception 
      */  
-    public void pushFromHead(Task value) throws Exception{ 
+    public void pushFromHead(IQueueTask value) throws Exception{ 
         listOperations.leftPush(value);  
         //listOperations.notifyAll();
     }  
@@ -96,7 +96,7 @@ public class RedisQueuePool implements InitializingBean{
      * @param value
      * @throws Exception 
      */
-    public void pushFromTail(Task value) throws Exception{ 
+    public void pushFromTail(IQueueTask value) throws Exception{ 
         listOperations.rightPush(value);  
         //listOperations.notifyAll();
     }  
@@ -105,7 +105,7 @@ public class RedisQueuePool implements InitializingBean{
      * 从头取出任务
      * @return null if no item in queue 
      */  
-    public Task takeFromHead() throws Exception{  
+    public IQueueTask takeFromHead() throws Exception{  
         return listOperations.leftPop(60, TimeUnit.SECONDS);  
     }  
     
@@ -113,7 +113,7 @@ public class RedisQueuePool implements InitializingBean{
      * 从尾部取出任务
      * @return
      */
-    public Task takeFromTail() throws Exception{  
+    public IQueueTask takeFromTail() throws Exception{  
         return listOperations.rightPop(60, TimeUnit.SECONDS);  
     }  
       
@@ -159,7 +159,7 @@ public class RedisQueuePool implements InitializingBean{
         public void run() {
         	logger.info("reids队列工作线程>>"+this.index+"<<开始工作!!!");
             while (isRunning) {
-                Task r = null;
+                IQueueTask r = null;
                 synchronized (listOperations) {
 //                    while (listOperations.size()<=0) {
 //                        try {

@@ -11,7 +11,7 @@ import java.util.Date;
 * 
 * @author lgh
 */
-public abstract class Task implements Runnable, Serializable {
+public abstract class IQueueTask implements Runnable, Serializable {
     // private static Logger logger = Logger.getLogger(Task.class);
     /* 产生时间 */
     private Date generateTime = null;
@@ -24,7 +24,7 @@ public abstract class Task implements Runnable, Serializable {
 
     private long taskId;
 
-    public Task() {
+    public IQueueTask() {
         this.generateTime = new Date();
     }
 

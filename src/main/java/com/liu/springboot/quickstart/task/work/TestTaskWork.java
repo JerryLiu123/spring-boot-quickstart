@@ -1,8 +1,8 @@
 package com.liu.springboot.quickstart.task.work;
 
-import com.liu.springboot.quickstart.task.Task;
+import com.liu.springboot.quickstart.task.IQueueTask;
 
-public class TestTaskWork extends Task {
+public class TestTaskWork extends IQueueTask {
 
 	private int value;
 	
