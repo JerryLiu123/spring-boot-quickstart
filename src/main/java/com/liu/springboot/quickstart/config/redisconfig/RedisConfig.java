@@ -1,8 +1,5 @@
 package com.liu.springboot.quickstart.config.redisconfig;
 
-import java.lang.reflect.Method;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -16,6 +13,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 
@@ -23,12 +21,24 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import redis.clients.jedis.JedisPoolConfig;
+
 
 @Configuration
 @EnableCaching //启用缓存
-//@ConfigurationProperties(prefix="spring.redis")//配置文件前缀
+@ConfigurationProperties(prefix="spring.redis.cn")//配置文件前缀
+@SuppressWarnings({ "rawtypes", "unchecked" })
 public class RedisConfig extends CachingConfigurerSupport {
 	
+    private String database;
+    private String host;
+    private int port;
+    private String password;
+    private int timeout = 15000;
+    private int maxTotal = 10;
+    private long maxWait = 1000;
+    private int maxIdle = 8;
+    private int minIdle = 0;
 
     @Bean(name="keyGenerator")
     public KeyGenerator keyGenerator() {
@@ -44,7 +54,6 @@ public class RedisConfig extends CachingConfigurerSupport {
      * @param redisTemplate
      * @return
      */
-    @SuppressWarnings("rawtypes")
 	@Bean
     public CacheManager cacheManager(@Qualifier("redisTemplate")RedisTemplate redisTemplate) {
         RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
@@ -57,9 +66,8 @@ public class RedisConfig extends CachingConfigurerSupport {
      * @param factory
      * @return
      */
-    @SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean(name="redisTemplate")
-    public RedisTemplate<?, ?> redisTemplate(RedisConnectionFactory factory) {
+    public RedisTemplate<?, ?> redisTemplate(@Qualifier("jedisConnectionFactory")RedisConnectionFactory factory) {
     	RedisTemplate template = new RedisTemplate();
     	template.setConnectionFactory(factory);
 		setMySerializer(template);
@@ -67,11 +75,33 @@ public class RedisConfig extends CachingConfigurerSupport {
 		return template;
     }
     
+	@Bean(name="jedisPoolConfig")
+    public JedisPoolConfig jedisPoolConfig() {
+	    JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+	    jedisPoolConfig.setMaxTotal(this.maxTotal);
+	    jedisPoolConfig.setMaxIdle(this.maxIdle);
+	    jedisPoolConfig.setMinIdle(this.minIdle);
+	    jedisPoolConfig.setMaxWaitMillis(this.maxWait);
+        return jedisPoolConfig;
+    }
+	
+	@Bean(name="jedisConnectionFactory")
+	public JedisConnectionFactory jedisConnectionFactory() {
+	    JedisConnectionFactory factory = new JedisConnectionFactory();
+	    factory.setPoolConfig(this.jedisPoolConfig());
+	    factory.setHostName(this.host);
+	    factory.setPort(this.port);
+	    factory.setPassword(this.password);
+	    factory.setTimeout(this.timeout);
+	    factory.setUsePool(true);
+	    factory.afterPropertiesSet();
+	    return factory;
+	}
+    
     /**
      * 序列化方法
      * @param template
      */
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	private void setMySerializer(RedisTemplate template) {
 		Jackson2JsonRedisSerializer<Object> jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer<Object>(
 				Object.class);
@@ -82,4 +112,61 @@ public class RedisConfig extends CachingConfigurerSupport {
 		template.setKeySerializer(template.getStringSerializer());//设置key的序列化方式为String
 		template.setValueSerializer(jackson2JsonRedisSerializer);//设置value的序列化方法,转换为json
 	}
+    public String getDatabase() {
+        return database;
+    }
+    public void setDatabase(String database) {
+        this.database = database;
+    }
+    public String getHost() {
+        return host;
+    }
+    public void setHost(String host) {
+        this.host = host;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    public int getMaxTotal() {
+        return maxTotal;
+    }
+    public void setMaxTotal(int maxTotal) {
+        this.maxTotal = maxTotal;
+    }
+ 
+    public int getMaxIdle() {
+        return maxIdle;
+    }
+    public void setMaxIdle(int maxIdle) {
+        this.maxIdle = maxIdle;
+    }
+    public long getMaxWait() {
+        return maxWait;
+    }
+    public void setMaxWait(long maxWait) {
+        this.maxWait = maxWait;
+    }
+    public int getMinIdle() {
+        return minIdle;
+    }
+    public void setMinIdle(int minIdle) {
+        this.minIdle = minIdle;
+    }
+    public int getTimeout() {
+        return timeout;
+    }
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
+    }
+    public int getPort() {
+        return port;
+    }
+    public void setPort(int port) {
+        this.port = port;
+    }
+	
+	
 }

@@ -1,6 +1,5 @@
 logging:
-  config: classpath:logback.xml
-  path: d:/logs
+  config: classpath:logback-winner.xml
 server:
   port: 8080
   session-timeout: 60
@@ -8,6 +7,7 @@ server:
 connection: 
     resources: /res
     redsWorkSize: 6
+    applicationPath: 
 
 spring:
     datasource:
@@ -46,15 +46,16 @@ spring:
            baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml
            configLocation: classpath:/mybatis-config.xml
     redis:
-        database: 0
-        host: 192.168.56.2
-        port: 6379  
-        password: 123456
-        maxActive: 10
-        maxWaitTime: 60000
-        maxIdle: 60
-        minIdle: 0
-        timeout: 60
+        cn:
+           database: 0
+           host: 192.168.56.2
+           port: 6379
+           password: 123456
+           timeout: 60
+           maxTotal: 10
+           maxWait: 6000
+           maxIdle: 8
+           minIdle: 3
     resources:
         static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/webapp/
         chain:

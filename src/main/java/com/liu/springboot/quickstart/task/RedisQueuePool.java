@@ -2,6 +2,7 @@ package com.liu.springboot.quickstart.task;
 
 import java.util.Date;
 import java.util.concurrent.Executor;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.InitializingBean;
@@ -24,7 +25,7 @@ import com.liu.springboot.quickstart.config.ConstantsConfig;
  *
  */
 @Component
-@DependsOn({"taskPool"})//bean依赖关系(本Bean依赖于taskPool)
+@DependsOn({"taskPool", "redisTemplate"})//bean依赖关系(本Bean依赖于taskPool)
 public class RedisQueuePool implements InitializingBean{
 	private static Logger logger = Logger.getLogger(RedisQueuePool.class);
 
@@ -105,7 +106,7 @@ public class RedisQueuePool implements InitializingBean{
      * @return null if no item in queue 
      */  
     public Task takeFromHead() throws Exception{  
-        return listOperations.leftPop();  
+        return listOperations.leftPop(60, TimeUnit.SECONDS);  
     }  
     
     /**
@@ -113,7 +114,7 @@ public class RedisQueuePool implements InitializingBean{
      * @return
      */
     public Task takeFromTail() throws Exception{  
-        return listOperations.rightPop();  
+        return listOperations.rightPop(60, TimeUnit.SECONDS);  
     }  
       
     /**
@@ -160,14 +161,13 @@ public class RedisQueuePool implements InitializingBean{
             while (isRunning) {
                 Task r = null;
                 synchronized (listOperations) {
-                    while (listOperations.size()<=0) {
-                        try {
-                            /* 任务队列为空，则等待有新任务加入从而被唤醒 */
-                        	listOperations.wait(200);
-                        } catch (InterruptedException ie) {
-                            logger.error(ie);
-                        }
-                    }
+//                    while (listOperations.size()<=0) {
+//                        try {
+//                        	listOperations.wait(200);
+//                        } catch (InterruptedException ie) {
+//                            logger.error(ie);
+//                        }
+//                    }
                     /* 取出任务执行 */
                     try {
                     	r = takeFromHead();

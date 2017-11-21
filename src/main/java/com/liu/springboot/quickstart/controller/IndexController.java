@@ -1,6 +1,5 @@
 package com.liu.springboot.quickstart.controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +25,13 @@ public class IndexController {
 		dataMap.put("rs", ConstantsConfig.resources+"/");
 		throw new Exception("测试异常全局拦截");
 		//return "index";
+	}
+	
+	@RequestMapping(value="toSocket")
+	public String toSocket(Map<String, Object> dataMap) {
+	    dataMap.put("rs", ConstantsConfig.resources+"/");
+	    dataMap.put("ap", ConstantsConfig.applicationPath);
+	    return "socket";
 	}
 	
 	@ResponseBody

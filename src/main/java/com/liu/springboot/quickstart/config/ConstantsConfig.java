@@ -10,6 +10,8 @@ public class ConstantsConfig {
 	public static String resources = "";
 	/**Reids Task 工作线程数量**/
 	public static int redsWorkSize = 5;
+	/**应用路径**/
+	public static String applicationPath = "";
 	
 	/**数据源名称**/
 	public static final String DATESOURCE1 = "dataMySQL1";
@@ -26,6 +28,12 @@ public class ConstantsConfig {
 	}
 	public static void setRedsWorkSize(int redsWorkSize) {
 		ConstantsConfig.redsWorkSize = redsWorkSize;
-	}	
+	}
+    public static String getApplicationPath() {
+        return applicationPath;
+    }
+    public static void setApplicationPath(String applicationPath) {
+        ConstantsConfig.applicationPath = applicationPath;
+    }	
 	
 }

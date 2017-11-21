@@ -20,7 +20,7 @@ public class RedisTest extends BaseTest {
 	@Test
 	public void takTest() {
 		try {
-		    Thread.sleep(15000);
+		    Thread.sleep(2000);
 			System.out.println("放入队列开始");
 			for(int i=0; i<5;i++) {
 				redisQueuePool.pushFromTail(new TestTaskWork(i));
