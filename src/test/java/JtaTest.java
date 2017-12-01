@@ -1,12 +1,12 @@
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.liu.springboot.quickstart.service.VideoService;
+import com.liu.springboot.quickstart.service.IVideoService;
 
 public class JtaTest extends BaseTest {
 
 	@Autowired
-	private VideoService videoService;
+	private IVideoService videoService;
 	@Test
 	public void test(){
 		

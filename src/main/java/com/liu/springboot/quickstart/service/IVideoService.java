@@ -8,7 +8,7 @@ import com.liu.springboot.quickstart.model.BiVideoInfo;
 import com.liu.springboot.quickstart.model.BiZoneInfo;
 
 
-public interface VideoService {
+public interface IVideoService {
 
 	/**
 	 * 插入视频信息，并返回主键

@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.liu.springboot.quickstart.Application;
-import com.liu.springboot.quickstart.service.VideoService;
+import com.liu.springboot.quickstart.service.IVideoService;
 
 /**
  *@author lgh

@@ -12,10 +12,10 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import com.liu.springboot.quickstart.aop.annotation.ParameterNotBlank;
-import com.liu.springboot.quickstart.service.RedisService;
+import com.liu.springboot.quickstart.service.IRedisService;
 
 @Service(value="redisService")
-public class RedisServiceImpl implements RedisService {
+public class RedisServiceImpl implements IRedisService {
 
 	@Autowired
     private @Qualifier("redisTemplate")RedisTemplate<String, Object> redisTemplate;

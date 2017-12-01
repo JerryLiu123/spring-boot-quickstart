@@ -19,12 +19,12 @@ import com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper;
 import com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper;
 import com.liu.springboot.quickstart.model.BiVideoInfo;
 import com.liu.springboot.quickstart.model.BiZoneInfo;
-import com.liu.springboot.quickstart.service.VideoService;
+import com.liu.springboot.quickstart.service.IVideoService;
 import com.liu.springboot.quickstart.util.dynamicdatasource.CustomerContextHolder;
 
 
 @Service(value="videoService")
-public class VideoServiceImpl implements VideoService {
+public class VideoServiceImpl implements IVideoService {
 	private static Logger logger = Logger.getLogger(VideoServiceImpl.class);
 	
 	@Autowired

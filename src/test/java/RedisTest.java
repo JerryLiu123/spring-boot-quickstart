@@ -5,7 +5,7 @@ import java.util.Map;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.liu.springboot.quickstart.service.RedisService;
+import com.liu.springboot.quickstart.service.IRedisService;
 import com.liu.springboot.quickstart.task.RedisQueuePool;
 import com.liu.springboot.quickstart.task.work.TestTaskWork;
 import com.liu.springboot.quickstart.util.ArrayUtils;
@@ -15,7 +15,7 @@ public class RedisTest extends BaseTest {
 	@Autowired
 	private RedisQueuePool redisQueuePool;
 	@Autowired
-	private RedisService redisService;
+	private IRedisService redisService;
 	
 	@Test
 	public void takTest() {

@@ -115,11 +115,13 @@
 		<artifactId>spring-boot-starter-test</artifactId>
 		<scope>test</scope>
 	</dependency>
+	<!-- zookeeper 依赖 -->
+	
 	<dependency>
 	    <groupId>com.github.abel533</groupId>
 	    <artifactId>mapper</artifactId>
 	    <version>3.0.0</version>
-	</dependency>  
+	</dependency>
   </dependencies>
   
   

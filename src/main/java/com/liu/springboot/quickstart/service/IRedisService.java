@@ -7,7 +7,7 @@ import java.util.Set;
  * @author lgh
  *
  */
-public interface  RedisService {
+public interface  IRedisService {
 
 	/**
 	 * 按照key删除redis中的值(批量删除)
