@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * soring boot 启动的主类~
  * 新建项目的时候就不要用 web项目了~老老实实用java项目吧~ 
- * java -jar -Dspring.config.location=XXX.yml XXX.jar --spring.profiles.active=XXX
+ * java -jar -Dspring.config.location=XXX.yml -Dlogpath=XXX -Dservicename=ser1 XXX.jar --spring.profiles.active=XXX
  * @author xiaoming
  *
  */
