@@ -38,6 +38,7 @@ public class Application extends SpringBootServletInitializer implements Embedde
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(Application.class, args);
+		//初始化zookeeper节点
 		logger.info("=====spring boot 启动成功!!!====");
 	}
 

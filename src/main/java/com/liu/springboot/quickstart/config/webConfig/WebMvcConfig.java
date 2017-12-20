@@ -20,6 +20,7 @@ import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializerProvider;
+import com.liu.springboot.quickstart.config.ConstantsConfig;
 
 @Configuration
 public class WebMvcConfig extends WebMvcConfigurerAdapter{
@@ -91,7 +92,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// TODO Auto-generated method stub
-		registry.addResourceHandler("/res/**").addResourceLocations("classpath:/res/");
-
+		registry.addResourceHandler("/res/**").addResourceLocations("classpath:/"+ConstantsConfig.resources);
 	}
 }

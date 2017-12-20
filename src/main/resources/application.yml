@@ -1,14 +1,17 @@
 logging:
   config: classpath:logback-winner.xml
+  
 server:
   port: 8080
   session-timeout: 60
 
 connection: 
-    resources: /res
-    redsWorkSize: 6
+    resources: /res/
+    redsWorkSize: 7
+    serID: 1
+    zkHosts: 192.168.56.2:2181
     applicationPath: 
-
+    
 spring:
     datasource:
         db01:

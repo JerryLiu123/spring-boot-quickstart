@@ -6,7 +6,7 @@ import java.util.Date;
 
 /**
 * 线程池
-* 所有任务基类
+* 所有队列任务基类
 * 其他任务必须继承此抽象类
 * 
 * @author lgh
