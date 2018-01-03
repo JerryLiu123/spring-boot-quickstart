@@ -1,0 +1,766 @@
+2017-12-21 09:43:21.240 [main] INFO  c.l.s.quickstart.Application -Starting Application on JerryLiu with PID 10568 (E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2017-12-21 09:43:21.244 [main] INFO  c.l.s.quickstart.Application -The following profiles are active: test
+2017-12-21 09:43:22.130 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2017-12-21 09:43:22.196 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 09:43:22 CST 2017]; root of context hierarchy
+2017-12-21 09:43:23.295 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 09:43:23.296 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 09:43:23.658 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-21 09:43:27.980 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-12-21 09:43:28.005 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2017-12-21 09:43:28.007 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-21 09:43:28.315 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-12-21 09:43:28.315 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 6120 ms
+2017-12-21 09:43:30.845 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-21 09:43:30.853 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-21 09:43:30.855 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2017-12-21 09:43:30.855 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-21 09:43:30.856 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-21 09:43:30.856 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-21 09:43:30.856 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2017-12-21 09:43:32.209 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2017-12-21 09:43:33.495 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2017-12-21 09:43:33.510 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2017-12-21 09:43:33.612 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2017-12-21 09:43:33.722 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2017-12-21 09:43:33.727 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2017-12-21 09:43:33.728 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2017-12-21 09:43:33.729 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2017-12-21 09:43:33.729 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2017-12-21 09:43:33.729 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2017-12-21 09:43:33.729 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2017-12-21 09:43:42.933 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-12-21 09:43:42.933 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2017-12-21 09:43:42.933 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2017-12-21 09:43:42.933 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2017-12-21 09:43:42.933 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2017-12-21 09:43:42.934 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2017-12-21 09:43:42.935 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2017-12-21 09:43:42.936 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2017-12-21 09:43:42.936 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2017-12-21 09:43:42.937 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@20be890d
+2017-12-21 09:43:42.971 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 09:43:42.973 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2017-12-21 09:43:42.992 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x16076a419d20002, negotiated timeout = 10000
+2017-12-21 09:43:42.994 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2017-12-21 09:43:43.016 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2017-12-21 09:43:43.115 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2017-12-21 09:43:43.117 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2017-12-21 09:43:43.118 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2017-12-21 09:43:43.192 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2017-12-21 09:43:43.197 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog157.log
+2017-12-21 09:43:43.198 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2017-12-21 09:43:43.199 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog157.log
+2017-12-21 09:43:43.250 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2017-12-21 09:43:43.251 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2017-12-21 09:43:43.252 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2017-12-21 09:43:43.252 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2017-12-21 09:43:43.253 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2017-12-21 09:43:43.253 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2017-12-21 09:43:43.253 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2017-12-21 09:43:43.253 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2017-12-21 09:43:43.254 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2017-12-21 09:43:43.255 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2017-12-21 09:43:43.340 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@20a47036
+2017-12-21 09:43:43.342 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@6591f8ea
+2017-12-21 09:43:46.845 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 09:43:22 CST 2017]; root of context hierarchy
+2017-12-21 09:43:47.299 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2017-12-21 09:43:47.303 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-12-21 09:43:47.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2017-12-21 09:43:47.304 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2017-12-21 09:43:47.311 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-21 09:43:47.313 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-21 09:43:47.839 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 09:43:47.839 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 09:43:47.839 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 09:43:47.901 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in errorControllerAdvice
+2017-12-21 09:43:48.068 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 09:43:51.803 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2017-12-21 09:43:51.954 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-12-21 09:43:51.968 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2017-12-21 09:43:51.987 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-21 09:43:52.006 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-21 09:43:52.072 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+2017-12-21 09:43:52.076 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -Using a shared selector for servlet write/read
+2017-12-21 09:43:52.107 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-12-21 09:43:52.115 [main] INFO  c.l.s.quickstart.Application -Started Application in 31.963 seconds (JVM running for 32.796)
+2017-12-21 09:43:52.115 [main] INFO  c.l.s.quickstart.Application -=====spring boot 启动成功!!!====
+2017-12-21 09:43:52.116 [Thread-6] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2017-12-21 10:14:53.026 [main] INFO  c.l.s.quickstart.Application -Starting Application on JerryLiu with PID 4868 (E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2017-12-21 10:14:53.030 [main] INFO  c.l.s.quickstart.Application -The following profiles are active: test
+2017-12-21 10:14:53.813 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:14:53 CST 2017]; root of context hierarchy
+2017-12-21 10:14:53.852 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2017-12-21 10:14:55.011 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:14:55.011 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:14:55.373 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-21 10:14:56.799 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webConfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$47655f8a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:14:56.817 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2017-12-21 10:14:56.841 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2017-12-21 10:14:56.842 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:15:02.154 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-12-21 10:15:02.194 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2017-12-21 10:15:02.197 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-21 10:15:02.552 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-12-21 10:15:02.553 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 8740 ms
+2017-12-21 10:15:04.939 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-21 10:15:04.948 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-21 10:15:04.950 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2017-12-21 10:15:04.950 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-21 10:15:04.951 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-21 10:15:04.958 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-21 10:15:04.959 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2017-12-21 10:15:06.321 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2017-12-21 10:15:07.707 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2017-12-21 10:15:07.799 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2017-12-21 10:15:07.803 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2017-12-21 10:15:07.804 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2017-12-21 10:15:07.805 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2017-12-21 10:15:07.804 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2017-12-21 10:15:07.805 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2017-12-21 10:15:07.803 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2017-12-21 10:15:07.847 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2017-12-21 10:15:07.848 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2017-12-21 10:15:07.850 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@6723cce7
+2017-12-21 10:15:07.907 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:15:07.910 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2017-12-21 10:15:07.924 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x16076a419d20003, negotiated timeout = 10000
+2017-12-21 10:15:07.928 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2017-12-21 10:15:07.989 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2017-12-21 10:15:08.105 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2017-12-21 10:15:08.115 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2017-12-21 10:15:08.115 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2017-12-21 10:15:08.213 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2017-12-21 10:15:08.235 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog158.log
+2017-12-21 10:15:08.236 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2017-12-21 10:15:08.238 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog158.log
+2017-12-21 10:15:08.297 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2017-12-21 10:15:08.298 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2017-12-21 10:15:08.298 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2017-12-21 10:15:08.298 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2017-12-21 10:15:08.299 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2017-12-21 10:15:08.300 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2017-12-21 10:15:08.300 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2017-12-21 10:15:08.301 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2017-12-21 10:15:08.301 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2017-12-21 10:15:08.302 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2017-12-21 10:15:08.473 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@4ae49387
+2017-12-21 10:15:08.474 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@6c70b7c3
+2017-12-21 10:15:12.678 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:14:53 CST 2017]; root of context hierarchy
+2017-12-21 10:15:13.072 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2017-12-21 10:15:13.075 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-12-21 10:15:13.080 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2017-12-21 10:15:13.080 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2017-12-21 10:15:13.084 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-21 10:15:13.085 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-21 10:15:13.650 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:15:13.651 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:15:13.651 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:15:13.730 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in errorControllerAdvice
+2017-12-21 10:15:13.892 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:15:18.152 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2017-12-21 10:15:18.289 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-12-21 10:15:18.304 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2017-12-21 10:15:18.323 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-21 10:15:18.345 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:15:18.383 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:15:18.388 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -Using a shared selector for servlet write/read
+2017-12-21 10:15:18.425 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-12-21 10:15:18.435 [main] INFO  c.l.s.quickstart.Application -Started Application in 26.3 seconds (JVM running for 26.975)
+2017-12-21 10:15:18.441 [main] INFO  c.l.s.quickstart.Application -=====spring boot 启动成功!!!====
+2017-12-21 10:15:18.477 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2017-12-21 10:15:18.554 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------创建节点:/myapp/ser/1-----
+2017-12-21 10:15:18.555 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2017-12-21 10:15:18.554 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------创建节点成功！！！-----
+2017-12-21 10:15:23.560 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:28.562 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:33.565 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:38.568 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:43.571 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:48.575 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:53.579 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:15:58.582 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:03.585 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:08.588 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:13.591 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:18.593 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:23.596 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:28.599 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:33.601 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:38.604 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:43.607 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:48.609 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:53.611 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:16:58.613 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:03.616 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:08.619 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:13.623 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:18.625 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:23.628 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:28.630 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:33.633 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:38.635 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:17:38.745 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Unable to read additional data from server sessionid 0x16076a419d20003, likely server has closed socket, closing socket connection and attempting reconnect
+2017-12-21 10:17:38.847 [main-EventThread] WARN  c.l.s.q.util.ZookeeperOperator ------有zk ser断开-----
+2017-12-21 10:17:40.537 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:17:41.541 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076a419d20003 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:17:43.186 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:17:44.188 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076a419d20003 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:17:45.920 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:17:46.933 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076a419d20003 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:17:48.870 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:17:49.871 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076a419d20003 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:22:09.608 [main] INFO  c.l.s.quickstart.Application -Starting Application on JerryLiu with PID 16044 (E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2017-12-21 10:22:09.614 [main] INFO  c.l.s.quickstart.Application -The following profiles are active: test
+2017-12-21 10:22:10.308 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:22:10 CST 2017]; root of context hierarchy
+2017-12-21 10:22:10.443 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2017-12-21 10:22:11.597 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:22:11.598 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:22:11.891 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-21 10:22:13.135 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webConfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$eb92e0c0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:22:13.169 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2017-12-21 10:22:13.191 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2017-12-21 10:22:13.192 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:22:17.813 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-12-21 10:22:17.985 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2017-12-21 10:22:17.992 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-21 10:22:18.207 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-12-21 10:22:18.208 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 7900 ms
+2017-12-21 10:22:20.523 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-21 10:22:20.535 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-21 10:22:20.536 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2017-12-21 10:22:20.537 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-21 10:22:20.537 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-21 10:22:20.537 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-21 10:22:20.538 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2017-12-21 10:22:21.926 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2017-12-21 10:22:23.222 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2017-12-21 10:22:23.333 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2017-12-21 10:22:23.348 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2017-12-21 10:22:23.349 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2017-12-21 10:22:23.349 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2017-12-21 10:22:23.350 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2017-12-21 10:22:23.350 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2017-12-21 10:22:23.350 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2017-12-21 10:22:23.401 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2017-12-21 10:22:23.402 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2017-12-21 10:22:23.403 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2017-12-21 10:22:23.403 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2017-12-21 10:22:23.404 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@6ace919c
+2017-12-21 10:22:23.519 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:22:23.522 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2017-12-21 10:22:23.582 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x16076e044d60001, negotiated timeout = 10000
+2017-12-21 10:22:23.586 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2017-12-21 10:22:23.656 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2017-12-21 10:22:23.730 [main] INFO  c.l.s.quickstart.util.SpringUtil -========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:22:10 CST 2017]; root of context hierarchy========
+2017-12-21 10:22:23.801 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2017-12-21 10:22:23.803 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2017-12-21 10:22:23.804 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2017-12-21 10:22:23.892 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2017-12-21 10:22:23.914 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog159.log
+2017-12-21 10:22:23.914 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2017-12-21 10:22:23.915 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog159.log
+2017-12-21 10:22:23.981 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2017-12-21 10:22:23.982 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2017-12-21 10:22:23.983 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2017-12-21 10:22:23.983 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2017-12-21 10:22:23.983 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2017-12-21 10:22:23.983 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2017-12-21 10:22:23.984 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2017-12-21 10:22:23.985 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2017-12-21 10:22:23.985 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2017-12-21 10:22:23.985 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2017-12-21 10:22:23.986 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2017-12-21 10:22:23.986 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2017-12-21 10:22:23.986 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2017-12-21 10:22:23.986 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2017-12-21 10:22:24.081 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@344f9467
+2017-12-21 10:22:24.081 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@20faaf77
+2017-12-21 10:22:28.917 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:22:10 CST 2017]; root of context hierarchy
+2017-12-21 10:22:29.405 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2017-12-21 10:22:29.412 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-12-21 10:22:29.412 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2017-12-21 10:22:29.413 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2017-12-21 10:22:29.420 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-21 10:22:29.421 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-21 10:22:30.039 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:22:30.040 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:22:30.040 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:22:30.107 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in errorControllerAdvice
+2017-12-21 10:22:30.354 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:22:35.045 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2017-12-21 10:22:35.200 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-12-21 10:22:35.217 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2017-12-21 10:22:35.376 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-21 10:22:35.397 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:22:35.458 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:22:35.463 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -Using a shared selector for servlet write/read
+2017-12-21 10:22:35.511 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-12-21 10:22:35.519 [main] INFO  c.l.s.quickstart.Application -Started Application in 26.854 seconds (JVM running for 27.687)
+2017-12-21 10:22:35.527 [main] INFO  c.l.s.quickstart.Application -=====spring boot 启动成功!!!====
+2017-12-21 10:22:35.538 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2017-12-21 10:22:35.565 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------创建节点:/myapp/ser/1-----
+2017-12-21 10:22:35.565 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2017-12-21 10:22:35.565 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------创建节点成功！！！-----
+2017-12-21 10:22:40.568 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:22:45.571 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:22:50.573 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:22:55.577 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:00.580 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:05.583 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:10.586 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:15.588 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:20.592 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:25.594 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:30.597 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:35.601 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:40.603 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:45.607 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:50.609 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:23:55.612 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:00.615 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:05.617 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:10.620 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:15.622 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:20.624 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:25.626 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:30.629 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:35.632 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:40.634 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:45.637 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:50.642 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:24:55.644 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:00.647 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:05.660 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:10.667 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:15.687 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:20.690 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:25.693 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:30.695 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:35.698 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:40.700 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:45.702 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:25:48.283 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Unable to read additional data from server sessionid 0x16076e044d60001, likely server has closed socket, closing socket connection and attempting reconnect
+2017-12-21 10:25:48.384 [main-EventThread] WARN  c.l.s.q.util.ZookeeperOperator ------有zk ser断开-----
+2017-12-21 10:25:49.887 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:25:50.894 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076e044d60001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:25:51.007 [taskExecutor_8] ERROR c.l.s.quickstart.task.work.SignInSer -注册节点失败!!!!--KeeperException：
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /myapp/ser/1
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1045)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1073)
+	at com.liu.springboot.quickstart.util.ZookeeperOperator.checkChild(ZookeeperOperator.java:197)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:27)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-21 10:25:52.607 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:25:53.609 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076e044d60001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:25:53.710 [taskExecutor_8] ERROR c.l.s.quickstart.task.work.SignInSer -注册节点失败!!!!--KeeperException：
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /myapp/ser/1
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1045)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1073)
+	at com.liu.springboot.quickstart.util.ZookeeperOperator.checkChild(ZookeeperOperator.java:197)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:27)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-21 10:25:54.759 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:25:55.763 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076e044d60001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:25:55.863 [taskExecutor_8] ERROR c.l.s.quickstart.task.work.SignInSer -注册节点失败!!!!--KeeperException：
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /myapp/ser/1
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1045)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1073)
+	at com.liu.springboot.quickstart.util.ZookeeperOperator.checkChild(ZookeeperOperator.java:197)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:27)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-21 10:25:57.099 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:25:58.102 [main-SendThread(192.168.56.2:2181)] WARN  org.apache.zookeeper.ClientCnxn -Session 0x16076e044d60001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1081)
+2017-12-21 10:25:58.202 [taskExecutor_8] ERROR c.l.s.quickstart.task.work.SignInSer -注册节点失败!!!!--KeeperException：
+org.apache.zookeeper.KeeperException$ConnectionLossException: KeeperErrorCode = ConnectionLoss for /myapp/ser/1
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:99)
+	at org.apache.zookeeper.KeeperException.create(KeeperException.java:51)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1045)
+	at org.apache.zookeeper.ZooKeeper.exists(ZooKeeper.java:1073)
+	at com.liu.springboot.quickstart.util.ZookeeperOperator.checkChild(ZookeeperOperator.java:197)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:27)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2017-12-21 10:47:08.928 [main] INFO  c.l.s.quickstart.Application -Starting Application on JerryLiu with PID 13264 (E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2017-12-21 10:47:08.933 [main] INFO  c.l.s.quickstart.Application -The following profiles are active: test
+2017-12-21 10:47:09.655 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:47:09 CST 2017]; root of context hierarchy
+2017-12-21 10:47:09.826 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2017-12-21 10:47:10.876 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:47:10.876 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2017-12-21 10:47:11.205 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2017-12-21 10:47:12.577 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webConfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$96648377] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:47:12.604 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2017-12-21 10:47:12.637 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2017-12-21 10:47:12.638 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-12-21 10:47:15.675 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-12-21 10:47:15.885 [main] INFO  o.a.catalina.core.StandardService -Starting service [Tomcat]
+2017-12-21 10:47:15.891 [main] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.16
+2017-12-21 10:47:16.122 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-12-21 10:47:16.123 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 6468 ms
+2017-12-21 10:47:18.854 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-12-21 10:47:18.861 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-12-21 10:47:18.862 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'springSessionRepositoryFilter' to: [/*]
+2017-12-21 10:47:18.863 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-12-21 10:47:18.864 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-12-21 10:47:18.864 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-12-21 10:47:18.864 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'resourceUrlEncodingFilter' to: [/*]
+2017-12-21 10:47:20.168 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2017-12-21 10:47:21.605 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2017-12-21 10:47:21.723 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2017-12-21 10:47:21.729 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2017-12-21 10:47:21.729 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2017-12-21 10:47:21.730 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2017-12-21 10:47:21.730 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2017-12-21 10:47:21.730 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2017-12-21 10:47:21.730 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2017-12-21 10:47:21.776 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2017-12-21 10:47:21.777 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2017-12-21 10:47:21.778 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2017-12-21 10:47:21.778 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2017-12-21 10:47:21.778 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2017-12-21 10:47:21.779 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@63c99f7
+2017-12-21 10:47:21.846 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-12-21 10:47:21.850 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2017-12-21 10:47:21.862 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x16076f75a1e0001, negotiated timeout = 10000
+2017-12-21 10:47:21.869 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2017-12-21 10:47:21.925 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2017-12-21 10:47:21.994 [main] INFO  c.l.s.quickstart.util.SpringUtil -========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:47:09 CST 2017]; root of context hierarchy========
+2017-12-21 10:47:22.092 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2017-12-21 10:47:22.101 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2017-12-21 10:47:22.102 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2017-12-21 10:47:22.234 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2017-12-21 10:47:22.240 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog160.log
+2017-12-21 10:47:22.241 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2017-12-21 10:47:22.242 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog160.log
+2017-12-21 10:47:22.311 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2017-12-21 10:47:22.311 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2017-12-21 10:47:22.312 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2017-12-21 10:47:22.312 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2017-12-21 10:47:22.312 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2017-12-21 10:47:22.313 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2017-12-21 10:47:22.314 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2017-12-21 10:47:22.314 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2017-12-21 10:47:22.314 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2017-12-21 10:47:22.314 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2017-12-21 10:47:22.315 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2017-12-21 10:47:22.315 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2017-12-21 10:47:22.315 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2017-12-21 10:47:22.423 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@38ef1a0a
+2017-12-21 10:47:22.424 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@749d7c01
+2017-12-21 10:47:26.339 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@60015ef5: startup date [Thu Dec 21 10:47:09 CST 2017]; root of context hierarchy
+2017-12-21 10:47:26.706 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2017-12-21 10:47:26.709 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2017-12-21 10:47:26.712 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2017-12-21 10:47:26.713 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2017-12-21 10:47:26.720 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-12-21 10:47:26.721 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-12-21 10:47:27.305 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:47:27.305 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:47:27.305 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:47:27.378 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in errorControllerAdvice
+2017-12-21 10:47:27.568 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-12-21 10:47:31.583 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2017-12-21 10:47:31.820 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-12-21 10:47:31.837 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2017-12-21 10:47:31.858 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2017-12-21 10:47:31.877 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Initializing ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:47:31.905 [main] INFO  o.a.coyote.http11.Http11NioProtocol -Starting ProtocolHandler ["http-nio-8080"]
+2017-12-21 10:47:31.907 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -Using a shared selector for servlet write/read
+2017-12-21 10:47:31.953 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-12-21 10:47:31.962 [main] INFO  c.l.s.quickstart.Application -Started Application in 23.918 seconds (JVM running for 24.565)
+2017-12-21 10:47:31.973 [main] INFO  c.l.s.quickstart.Application -=====spring boot 启动成功!!!====
+2017-12-21 10:47:31.990 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2017-12-21 10:47:32.024 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------创建节点:/myapp/ser/1-----
+2017-12-21 10:47:32.024 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2017-12-21 10:47:32.025 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------创建节点成功！！！-----
+2017-12-21 10:47:37.028 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:47:42.031 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:47:47.034 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:47:52.037 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:47:57.040 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:02.044 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:07.046 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:12.050 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:17.053 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:22.058 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:27.060 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:32.062 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:37.065 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:42.068 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:47.070 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:52.074 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:48:57.076 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:02.079 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:07.082 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:12.085 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:17.087 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:22.091 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:27.095 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:32.097 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:37.099 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:42.102 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:47.104 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:52.107 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:49:57.109 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:02.112 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:07.114 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:12.116 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:17.121 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:22.123 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:27.125 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:32.128 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:37.131 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:42.133 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:47.136 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:52.138 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:50:57.141 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:02.143 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:07.146 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:12.148 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:17.151 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:22.153 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:27.155 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:32.158 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:37.160 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:42.162 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:47.164 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:52.167 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:51:57.169 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:02.172 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:07.174 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:12.176 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:17.179 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:22.182 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:27.185 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:32.188 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:37.190 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:42.193 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:47.195 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:52.198 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:52:57.200 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:02.203 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:07.204 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:12.208 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:17.210 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:22.212 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:27.215 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:32.217 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:37.220 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:42.223 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:47.225 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:52.228 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:53:57.230 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:02.233 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:07.236 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:12.239 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:17.241 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:22.243 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:27.245 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:32.248 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:37.258 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:42.259 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:47.263 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:52.265 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:54:57.268 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:02.269 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:07.272 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:12.274 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:17.276 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:22.279 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:27.282 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:32.285 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:37.287 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:42.289 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:47.291 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:52.295 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:55:57.299 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:02.302 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:07.304 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:12.306 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:17.309 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:22.311 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:27.315 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:32.318 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:37.319 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:42.322 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:47.326 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:52.329 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:56:57.331 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:02.333 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:07.335 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:12.338 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:17.340 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:22.344 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:27.345 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:32.347 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:37.350 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:42.352 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:47.354 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:52.357 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:57:57.359 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:02.362 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:07.364 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:12.367 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:17.368 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:22.372 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:27.373 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:32.377 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:37.379 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:42.382 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:47.385 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:52.386 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:58:57.392 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:59:02.394 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----
+2017-12-21 10:59:07.398 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------/myapp/ser/1  节点正常-----

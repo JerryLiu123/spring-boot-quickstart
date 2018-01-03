@@ -36,31 +36,42 @@ public class ZookeeperOperator implements Watcher {
         try {
             zooKeeper = new ZooKeeper(this.hosts, Integer.parseInt(ConstantsConfig.sessionTimeOut), this);
             countDownLatch.await(4000, TimeUnit.MILLISECONDS);//设置等待超时时间
-            //初始化本应用的节点
-            if(this.checkChild(ConstantsConfig.ZKMAINZONE, false) == null) {
-                this.createPerNode(ConstantsConfig.ZKMAINZONE, "应用主节点".getBytes());
-            }
-            if(this.checkChild(ConstantsConfig.ZKSERNODE, false) == null) {
-                this.createPerNode(ConstantsConfig.ZKSERNODE, "每一个ser注册的节点名目录".getBytes());
-            }
-            if(this.checkChild(ConstantsConfig.ZKSERNODE+"/0", false) == null) {
-                this.createPerNode(ConstantsConfig.ZKSERNODE+"/0", "测试节点".getBytes());
-            }
-            if(this.checkChild(ConstantsConfig.ZKWORKNODE, false) == null) {
-                this.createPerNode(ConstantsConfig.ZKWORKNODE, "任务节点".getBytes());
-            }
-            if(this.checkChild(ConstantsConfig.ZKWORKALLNODE, false) == null) {
-                this.createPerNode(ConstantsConfig.ZKWORKALLNODE, "所有任务".getBytes());
-            }
-            zooKeeper.getChildren(ConstantsConfig.ZKSERNODE, this);
-            zooKeeper.getData(ConstantsConfig.ZKWORKNODE, this, null);
-            zooKeeper.getData(ConstantsConfig.ZKWORKALLNODE, this, null);
+            initNode();
             logger.info("-----初始化ZookeeperOperator服务成功-----");
         } catch (Exception e) {
             // TODO: handle exception
             logger.error("-----初始化ZookeeperOperator服务失败！！！-----", e);
         } 
 	}
+	
+	public void initNode() throws KeeperException, InterruptedException {
+        //初始化本应用的节点
+        if(this.checkChild(ConstantsConfig.ZKMAINZONE, false) == null) {
+            this.createPerNode(ConstantsConfig.ZKMAINZONE, "应用主节点".getBytes());
+        }
+        if(this.checkChild(ConstantsConfig.ZKSERNODE, false) == null) {
+            this.createPerNode(ConstantsConfig.ZKSERNODE, "每一个ser注册的节点名目录".getBytes());
+        }
+        if(this.checkChild(ConstantsConfig.ZKSERNODE+"/0", false) == null) {
+            this.createPerNode(ConstantsConfig.ZKSERNODE+"/0", "测试节点".getBytes());
+        }
+        if(this.checkChild(ConstantsConfig.ZKWORKNODE, false) == null) {
+            this.createPerNode(ConstantsConfig.ZKWORKNODE, "任务节点".getBytes());
+        }
+        if(this.checkChild(ConstantsConfig.ZKWORKALLNODE, false) == null) {
+            this.createPerNode(ConstantsConfig.ZKWORKALLNODE, "所有任务".getBytes());
+        }
+        String zkMyWorkNode = ConstantsConfig.ZKWORKNODE + "/" + ConstantsConfig.serID;
+        if(this.checkChild(zkMyWorkNode, true) == null) {
+            this.createPerNode(zkMyWorkNode, null);
+        }
+        zooKeeper.getChildren(ConstantsConfig.ZKSERNODE, this);//对所有ser节点添加监听
+        //zooKeeper.getData(ConstantsConfig.ZKWORKNODE, this, null);//添加监听
+        zooKeeper.getData(ConstantsConfig.ZKWORKALLNODE, this, null);//对总共任务节点添加监听  
+        zooKeeper.getData(zkMyWorkNode, this, null);//对 当前ser工作的任务节点添加监听
+	}
+	
+	
 	public ZookeeperOperator() {
         // TODO Auto-generated constructor stub
     }
@@ -95,8 +106,8 @@ public class ZookeeperOperator implements Watcher {
 	                    }else if(path.equals(ConstantsConfig.ZKWORKNODE+"/"+ConstantsConfig.serID)) {
 	                        logger.info("-----本节点执行的任务数量变化 ( "+path+")-----");
 	                    }
-	                    
-	                    logger.info("-----节点："+path+"  修改后内容为："+new String(zooKeeper.getData(path, this, null), "utf-8")+"-----");
+	                    String da = new String(zooKeeper.getData(path, this, null), "utf-8");
+	                    logger.info("-----节点："+path+"  修改后内容为："+da+"-----");
 	                }
 	            } else if (EventType.NodeChildrenChanged == eventType) {
 	                // 更新子节点

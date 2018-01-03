@@ -1,6 +1,7 @@
 package com.liu.springboot.quickstart;
 
 import org.apache.log4j.Logger;
+import org.apache.tomcat.jni.Thread;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,9 @@ import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletCont
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
+
+import com.liu.springboot.quickstart.task.work.SignInSer;
+import com.liu.springboot.quickstart.util.SpringUtil;
 
 /**
  * soring boot 启动的主类~
@@ -38,8 +42,7 @@ public class Application extends SpringBootServletInitializer implements Embedde
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		SpringApplication.run(Application.class, args);
-		//初始化zookeeper节点
-		logger.info("=====spring boot 启动成功!!!====");
+		//logger.info("=====spring boot 启动成功!!!====");
 	}
 
 }

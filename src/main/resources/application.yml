@@ -11,6 +11,12 @@ connection:
     serID: 1
     zkHosts: 192.168.56.2:2181
     applicationPath: 
+
+management:
+    health:
+        redis:
+            enabled: true
+            order: DOWN, OUT_OF_SERVICE, UNKNOWN, UP
     
 spring:
     datasource:

@@ -1,9 +1,9 @@
 package com.liu.springboot.quickstart.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
-@Configuration
+@Component
 @ConfigurationProperties(prefix="connection")
 public class ConstantsConfig {
 	/**静态文件目录**/
