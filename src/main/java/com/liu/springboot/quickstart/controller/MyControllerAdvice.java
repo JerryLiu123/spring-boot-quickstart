@@ -16,7 +16,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class MyControllerAdvice {
 
 	private static Logger logger = Logger.getLogger(MyControllerAdvice.class);
-	
 //    /**
 //     * 应用到所有@RequestMapping注解方法，在其执行之前初始化数据绑定器
 //     * @param binder
@@ -49,5 +48,4 @@ public class MyControllerAdvice {
     	attr.addFlashAttribute("ex", ex.getMessage());
 	    return "redirect:er/500";
     }
-    
 }

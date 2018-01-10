@@ -3,6 +3,7 @@ package com.liu.springboot.quickstart.config.redisconfig;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.apache.log4j.Logger;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.config.Config;
@@ -34,7 +35,8 @@ import redis.clients.jedis.JedisPoolConfig;
 @ConfigurationProperties(prefix="spring.redis.cn")//配置文件前缀
 @SuppressWarnings({ "rawtypes", "unchecked" })
 public class RedisConfig extends CachingConfigurerSupport {
-	
+    private static Logger logger = Logger.getLogger(RedisConfig.class);
+    
     private String database;
     private String host;
     private int port;
@@ -45,12 +47,13 @@ public class RedisConfig extends CachingConfigurerSupport {
     private int maxIdle = 8;
     private int minIdle = 0;
 
-    @Bean(name="keyGenerator")
+    @Override
     public KeyGenerator keyGenerator() {
 		return (target, method, params) -> {
 			StringBuilder sb = new StringBuilder();
-			sb.append(target.getClass().getSimpleName()).append(":");//执行方法所在的类
+			sb.append(target.getClass().getSimpleName()).append(".").append(method.getName());//执行方法所在的类
 			sb.append(Stream.of(params).map(String::valueOf).collect(Collectors.joining("_")));
+			logger.info("KeyGenerator--->"+sb.toString());
 			return sb.toString();
 		};
     }
@@ -64,6 +67,7 @@ public class RedisConfig extends CachingConfigurerSupport {
         RedisCacheManager rcm = new RedisCacheManager(redisTemplate);
         //设置缓存过期时间
         rcm.setDefaultExpiration(60);//秒
+        logger.info("-----RedisCacheManager配置结束-----");
         return rcm;
     }
     /**
