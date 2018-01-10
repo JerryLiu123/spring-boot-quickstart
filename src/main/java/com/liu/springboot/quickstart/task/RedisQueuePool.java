@@ -1,7 +1,6 @@
 package com.liu.springboot.quickstart.task;
 
 import java.util.Date;
-import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
@@ -9,10 +8,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.DependsOn;
-import org.springframework.data.redis.connection.RedisConnection;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.BoundListOperations;
-import org.springframework.data.redis.core.RedisConnectionUtils;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
@@ -28,16 +24,12 @@ import com.liu.springboot.quickstart.config.ConstantsConfig;
 @DependsOn({"taskPool", "redisTemplate"})//bean依赖关系(本Bean依赖于taskPool)
 public class RedisQueuePool implements InitializingBean{
 	private static Logger logger = Logger.getLogger(RedisQueuePool.class);
+	private static final String KEY = "springbootquickstart"; 
 
 	@Autowired
     private @Qualifier("redisTemplate")RedisTemplate redisTemplateTask;
 	@Autowired
 	private @Qualifier("taskPool")ThreadPoolTaskExecutor taskPool;
-    private String key = "springbootquickstart";  
-    //private int cap = Short.MAX_VALUE;//最大阻塞的容量，超过容量将会导致清空旧数据  
-    private byte[] rawKey;  
-    private RedisConnectionFactory factory;  
-    private RedisConnection connection;//for blocking  
     private BoundListOperations<String, IQueueTask> listOperations;//noblocking
     //感觉hash主要用于对于对象的修改时比较有用，但是在本实例中对象并不需要修改，所以就没有使用hash
     //private BoundHashOperations<String, byte[], Task> hashOperations;
@@ -56,10 +48,8 @@ public class RedisQueuePool implements InitializingBean{
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
 		logger.info("初始化"+worker_num+"个队列工作线程");
-        factory = redisTemplateTask.getConnectionFactory();  
-        connection = RedisConnectionUtils.getConnection(factory);  
-        rawKey = redisTemplateTask.getKeySerializer().serialize(key);  
-        listOperations = redisTemplateTask.boundListOps(key); 
+        listOperations = redisTemplateTask.boundListOps(KEY);
+        
         //hashOperations = redisTemplate.boundHashOps(key);
         workers = new PoolWorker[worker_num];
         PoolWorker a = null;
@@ -197,9 +187,6 @@ public class RedisQueuePool implements InitializingBean{
             }
             logger.info("reids队列工作线程>>"+this.index+"<<!!!");
         }
-    }
-    public void setKey(String key) {  
-        this.key = key;  
     }
     public int getWorker_num() {
         return worker_num;

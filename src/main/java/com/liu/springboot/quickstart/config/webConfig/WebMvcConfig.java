@@ -92,6 +92,6 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter{
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		// TODO Auto-generated method stub
-		registry.addResourceHandler("/res/**").addResourceLocations("classpath:/"+ConstantsConfig.resources);
+		registry.addResourceHandler("/res/**").addResourceLocations("classpath:"+ConstantsConfig.resources+"/");
 	}
 }

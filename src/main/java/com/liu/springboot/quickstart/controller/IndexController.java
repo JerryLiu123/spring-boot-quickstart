@@ -14,15 +14,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.liu.springboot.quickstart.config.ConstantsConfig;
 
 @Controller
-public class IndexController {
+public class IndexController extends BaseController{
 
 	private static Logger logger = Logger.getLogger(IndexController.class);
 	
 	@RequestMapping(value="/index")
 	public String index(HttpServletRequest req,
-			HttpServletResponse resp, 
-			Map<String, Object> dataMap) throws Exception {
-		dataMap.put("rs", ConstantsConfig.resources+"/");
+			HttpServletResponse resp) throws Exception {
 		throw new Exception("测试异常全局拦截");
 		//return "index";
 	}

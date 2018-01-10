@@ -3,6 +3,10 @@ package com.liu.springboot.quickstart.config.redisconfig;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.redisson.Redisson;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
+import org.redisson.config.SingleServerConfig;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.cache.CacheManager;
@@ -16,6 +20,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
+import org.springframework.util.StringUtils;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
@@ -91,7 +96,9 @@ public class RedisConfig extends CachingConfigurerSupport {
 	    factory.setPoolConfig(this.jedisPoolConfig());
 	    factory.setHostName(this.host);
 	    factory.setPort(this.port);
-	    factory.setPassword(this.password);
+	    if(!StringUtils.isEmpty(this.password)) {
+	        factory.setPassword(this.password);
+	    }
 	    factory.setTimeout(this.timeout);
 	    factory.setUsePool(true);
 	    factory.afterPropertiesSet();
@@ -112,6 +119,26 @@ public class RedisConfig extends CachingConfigurerSupport {
 		template.setKeySerializer(template.getStringSerializer());//设置key的序列化方式为String
 		template.setValueSerializer(jackson2JsonRedisSerializer);//设置value的序列化方法,转换为json
 	}
+	
+	/**
+	 * 这里注入RedissonClient暂时只是用到了 其中分布式锁的功能，其他的redis操作没有迁移
+	 * @return
+	 */
+	@Bean
+	public RedissonClient redissonClient() {
+	    Config config = new Config();
+        SingleServerConfig serverConfig = config.useSingleServer()
+                .setAddress("redis://"+this.host+":"+this.port)
+                .setTimeout(this.timeout)
+                .setConnectionPoolSize(this.maxTotal)
+                .setConnectionMinimumIdleSize(this.minIdle);
+        if(!StringUtils.isEmpty(this.password)) {
+            serverConfig.setPassword(this.password);
+        }
+
+        return Redisson.create(config);	    
+	}
+	
     public String getDatabase() {
         return database;
     }

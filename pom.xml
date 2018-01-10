@@ -62,7 +62,13 @@
 	    <groupId>org.springframework.session</groupId>
 	    <artifactId>spring-session-data-redis</artifactId>
 	</dependency>
-
+	<!-- redis 分布式锁 -->
+	<dependency>
+	   <groupId>org.redisson</groupId>
+	   <artifactId>redisson</artifactId>
+	   <version>3.5.7</version>
+	</dependency>
+	
 	<!-- spring mysql 依赖开始 -->
     <dependency>  
 		<groupId>mysql</groupId>  

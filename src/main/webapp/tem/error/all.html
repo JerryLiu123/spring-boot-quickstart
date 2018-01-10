@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link th:href="@{${rs }+'css/index.css'}" type="text/css" rel="stylesheet" />
+<!-- <link th:href="@{${rs }+'css/index.css'}" type="text/css" rel="stylesheet" /> -->
+<link th:href="${urls.getForLookupPath([rs]+'css/index.css')}" type="text/css" rel="stylesheet" />
 <title>Insert title here</title>
 </head>
 <body>
-rs---<h2 th:text="${rs}" />
-code---<h2 th:text="${errorCode }"/>
-ex---<h2 th:text="${ex }"/>
+<h2 th:text="'rs---'+${rs}" />
+<h2 th:text="'code---'+${errorCode }"/>
+<h2 th:text="'url---'+${url }"/>
+<h2 th:text="'ex---'+${ex }"/>
 </body>
 </html>

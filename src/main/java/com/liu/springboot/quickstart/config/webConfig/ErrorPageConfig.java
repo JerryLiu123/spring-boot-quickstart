@@ -17,9 +17,9 @@ public class ErrorPageConfig implements EmbeddedServletContainerCustomizer {
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
 		// TODO Auto-generated method stub
-		container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/error/404"));
-		container.addErrorPages(new ErrorPage(HttpStatus.UNAUTHORIZED, "/error/401"));
-		container.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/error/500"));
+		container.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, "/er/404"));
+		container.addErrorPages(new ErrorPage(HttpStatus.UNAUTHORIZED, "/er/401"));
+		container.addErrorPages(new ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, "/er/500"));
 	}
 
 }
