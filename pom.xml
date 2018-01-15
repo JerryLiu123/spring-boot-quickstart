@@ -115,7 +115,13 @@
                 <groupId>org.slf4j</groupId>
             </exclusion>
         </exclusions>
-    </dependency>	
+    </dependency>
+    <!-- 加密 .yml文件 -->
+	<dependency>
+	        <groupId>com.github.ulisesbocchio</groupId>
+	        <artifactId>jasypt-spring-boot-starter</artifactId>
+	        <version>1.14</version>
+	</dependency>	
 	<dependency>
 	    <groupId>com.github.abel533</groupId>
 	    <artifactId>mapper</artifactId>

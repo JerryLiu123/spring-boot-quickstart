@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.config.webConfig;
+package com.liu.springboot.quickstart.config.webconfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

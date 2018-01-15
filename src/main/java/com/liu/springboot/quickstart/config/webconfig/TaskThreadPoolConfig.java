@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.config.webConfig;
+package com.liu.springboot.quickstart.config.webconfig;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;

@@ -18,10 +18,13 @@ public class ConstantsConfig {
 	public static String zkHosts = "";
 	/**zookeeper 超时session时间**/
 	public static String sessionTimeOut = "10000";
+	/**DES加密Key**/
+	public static String desKey = "mykey";
 	
 	/**数据源名称**/
 	public static final String DATESOURCE1 = "dataMySQL1";
 	public static final String DATESOURCE2 = "dataMySQL2";
+	
 	
 	/**zookeeper 应用根目录**/
 	public static final String ZKMAINZONE="/myapp";
@@ -67,6 +70,9 @@ public class ConstantsConfig {
     }
     public void setSerID(Long serID) {
         ConstantsConfig.serID = serID;
+    }
+    public static void setDesKey(String desKey) {
+        ConstantsConfig.desKey = desKey;
     }	
 	
 }

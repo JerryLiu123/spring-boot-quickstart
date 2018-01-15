@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.config.webConfig;
+package com.liu.springboot.quickstart.config.webconfig;
 
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
