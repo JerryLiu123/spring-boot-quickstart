@@ -118,10 +118,27 @@
     </dependency>
     <!-- 加密 .yml文件 -->
 	<dependency>
-	        <groupId>com.github.ulisesbocchio</groupId>
-	        <artifactId>jasypt-spring-boot-starter</artifactId>
-	        <version>1.14</version>
+	  <groupId>com.github.ulisesbocchio</groupId>
+	  <artifactId>jasypt-spring-boot-starter</artifactId>
+	  <version>1.14</version>
 	</dependency>	
+	<!-- 各种视图解析 -->
+ 	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-oxm</artifactId>
+	    <version>4.3.10.RELEASE</version>
+	</dependency>
+<!-- 	<dependency>
+	   <groupId>com.lowagie</groupId>
+	   <artifactId>itext</artifactId>
+	   <version>4.2.1</version>
+	</dependency> -->
+	<dependency>
+	   <groupId>org.apache.poi</groupId>
+	   <artifactId>poi</artifactId>
+	   <version>3.10-beta2</version>
+	</dependency>
+	
 	<dependency>
 	    <groupId>com.github.abel533</groupId>
 	    <artifactId>mapper</artifactId>
@@ -185,7 +202,7 @@
   </build>
   
   <!-- 远程仓库 -->
-<!--   <repositories>
+<!--    <repositories>
       <repository>
           <id>spring-milestones</id>
           <name>Spring Milestones</name>

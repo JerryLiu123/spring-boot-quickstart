@@ -10,8 +10,10 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.liu.springboot.quickstart.bean.DemoObj;
 import com.liu.springboot.quickstart.config.ConstantsConfig;
 import com.liu.springboot.quickstart.service.IMonitorService;
 
@@ -25,16 +27,16 @@ public class IndexController extends BaseController{
 	
 	@RequestMapping(value="/index")
 	public String index(HttpServletRequest req,
-			HttpServletResponse resp) throws Exception {
+			HttpServletResponse resp, Map<String, Object> dataMap) throws Exception {
 		//throw new Exception("测试异常全局拦截");
 	    monitorService.getMonitorInfoBean();
+	    DemoObj demoObj = new DemoObj(333l, "WYF");
+	    dataMap.put("demoObj", demoObj);
 		return "index";
 	}
 	
-	@RequestMapping(value="toSocket")
-	public String toSocket(Map<String, Object> dataMap) {
-	    dataMap.put("rs", ConstantsConfig.resources+"/");
-	    dataMap.put("ap", ConstantsConfig.applicationPath);
+	@RequestMapping(value="toSocket", method = RequestMethod.GET)
+	public String toSocket() {
 	    return "socket";
 	}
 	

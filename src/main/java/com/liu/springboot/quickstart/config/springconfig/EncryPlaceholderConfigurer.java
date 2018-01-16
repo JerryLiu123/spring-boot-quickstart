@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Configuration;
 
 import com.liu.springboot.quickstart.util.DefaultEncryptor;
 
+/**
+ * yml 属性加密
+ * @author lgh
+ *
+ */
 @Configuration
 public class EncryPlaceholderConfigurer {
 
