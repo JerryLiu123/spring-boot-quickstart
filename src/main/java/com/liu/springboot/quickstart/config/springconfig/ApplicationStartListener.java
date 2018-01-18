@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.util;
+package com.liu.springboot.quickstart.config.springconfig;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;

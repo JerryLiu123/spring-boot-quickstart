@@ -11,7 +11,7 @@ public class ConstantsConfig {
 	/**Reids Task 工作线程数量**/
 	public static int redsWorkSize = 5;
 	/**应用路径**/
-	public static String applicationPath = "";
+	public static String applicationPath;
 	/**节点编号**/
 	public static Long serID = 2L;
 	/**zookeeper 链接**/

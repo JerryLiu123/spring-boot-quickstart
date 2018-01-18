@@ -1,5 +1,7 @@
 package com.liu.springboot.quickstart.websocket;
 
+import javax.websocket.Session;
+
 import org.apache.log4j.Logger;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
@@ -8,11 +10,11 @@ public class TestSendMsgTask extends Thread{
 
     private static Logger logger = Logger.getLogger(TestSendMsgTask.class);
     
-    private WebSocketSession session;
+    private Session session;
     private String clientMsg;
     private boolean isRunning = true;
     
-    public TestSendMsgTask(WebSocketSession session, String clientMsg) {
+    public TestSendMsgTask(Session session, String clientMsg) {
         super();
         this.session = session;
         this.clientMsg = clientMsg;
@@ -23,7 +25,7 @@ public class TestSendMsgTask extends Thread{
         // TODO Auto-generated method stub
         while(isRunning) {
             try {
-                session.sendMessage(new TextMessage(">>>"+clientMsg+"<<<"));
+                session.getBasicRemote().sendText(">>>"+clientMsg+"<<<");
                 logger.info("--------------------"+clientMsg);
                 Thread.sleep(3000);
             } catch (Exception e) {

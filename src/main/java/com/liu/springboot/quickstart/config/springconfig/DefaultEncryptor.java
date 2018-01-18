@@ -1,6 +1,8 @@
-package com.liu.springboot.quickstart.util;
+package com.liu.springboot.quickstart.config.springconfig;
 
 import org.jasypt.encryption.StringEncryptor;
+
+import com.liu.springboot.quickstart.util.DESUtils;
 
 public class DefaultEncryptor implements StringEncryptor {
 

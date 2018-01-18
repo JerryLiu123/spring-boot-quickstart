@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
 import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -24,6 +25,7 @@ import com.liu.springboot.quickstart.util.SpringUtil;
 @EnableAutoConfiguration
 @ComponentScan(basePackages={"com.liu.springboot.quickstart"})
 @SpringBootApplication
+@ServletComponentScan //扫描监听器注解
 public class Application extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
 
 	private static Logger logger = Logger.getLogger(Application.class);

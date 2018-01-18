@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,14 @@ public class IndexController extends BaseController{
 	public String index(HttpServletRequest req,
 			HttpServletResponse resp, Map<String, Object> dataMap) throws Exception {
 		//throw new Exception("测试异常全局拦截");
+	    if(req.getSession().getAttribute("key") == null) {
+	        System.out.println("session中信息为空");
+	        req.getSession().setAttribute("key", "value");
+	    }else {
+	        System.out.println(req.getSession().getAttribute("key"));
+	    }
+	    
+	    //se.invalidate();
 	    monitorService.getMonitorInfoBean();
 	    DemoObj demoObj = new DemoObj(333l, "WYF");
 	    dataMap.put("demoObj", demoObj);
