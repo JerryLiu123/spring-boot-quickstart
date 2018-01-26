@@ -31,10 +31,10 @@ public class IndexController extends BaseController{
 			HttpServletResponse resp, Map<String, Object> dataMap) throws Exception {
 		//throw new Exception("测试异常全局拦截");
 	    if(req.getSession().getAttribute("key") == null) {
-	        System.out.println("session中信息为空");
+	        logger.info("session中信息为空");
 	        req.getSession().setAttribute("key", "value");
 	    }else {
-	        System.out.println(req.getSession().getAttribute("key"));
+	        logger.info(req.getSession().getAttribute("key"));
 	    }
 	    
 	    //se.invalidate();

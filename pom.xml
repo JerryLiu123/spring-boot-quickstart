@@ -55,8 +55,8 @@
     <!-- spring boot redis -->
 	<dependency>
 		<groupId>org.springframework.boot</groupId><!-- 会附带引进jedis-2.7.3的包 -->
-		<artifactId>spring-boot-starter-redis</artifactId>
-		<version>1.4.7.RELEASE</version>
+		<artifactId>spring-boot-starter-data-redis</artifactId>
+		<!-- <version>1.4.7.RELEASE</version> -->
 	</dependency>
  	<dependency>
 	    <groupId>org.springframework.session</groupId>

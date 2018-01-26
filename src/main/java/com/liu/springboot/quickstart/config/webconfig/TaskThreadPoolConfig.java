@@ -2,6 +2,7 @@ package com.liu.springboot.quickstart.config.webconfig;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.Executor;
+import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.apache.log4j.Logger;
@@ -62,7 +63,20 @@ public class TaskThreadPoolConfig implements AsyncConfigurer{
 				logger.error("exception method:"+arg1.getName());  
 			}  
 		};
-	}    
+	}
+	
+	/**
+	 * 注入 ForkJoinPool bean,用于执行 fork/join和并行流
+	 * @return
+	 */
+	@Bean
+	public ForkJoinPool forkJoinPool() {
+	    if(maxPoolSize < ConstantsConfig.redsWorkSize) {
+	        return new ForkJoinPool(ConstantsConfig.redsWorkSize + 5);
+	    }else {
+	        return new ForkJoinPool(maxPoolSize);
+	    }
+	}
     
 	public int getCorePoolSize() {
 		return corePoolSize;

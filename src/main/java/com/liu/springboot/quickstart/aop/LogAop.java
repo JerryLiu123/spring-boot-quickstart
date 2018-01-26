@@ -15,6 +15,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
 import com.liu.springboot.quickstart.aop.annotation.Log;
@@ -22,7 +23,7 @@ import com.liu.springboot.quickstart.aop.annotation.Log;
 
 @Aspect
 @Component//将bean 实例化到spring中
-public class LogAop {
+public class LogAop implements Ordered{
 
 	ThreadLocal<Long> time = new ThreadLocal<Long>();// 线程安全，使用ThreadLocal会在线程使用该变量的时候自动创建一个变量的副本
 	ThreadLocal<String> tag=new ThreadLocal<String>();
@@ -107,4 +108,13 @@ public class LogAop {
 		System.out.println("StaticPart:\t"+joinPoint.getStaticPart());
 		System.out.println("--------------------------------------------------");
 	}
+
+	/**
+	 * 切面顺序
+	 */
+    @Override
+    public int getOrder() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 }

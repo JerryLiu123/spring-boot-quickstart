@@ -1,0 +1,927 @@
+2018-01-15 10:41:28.079 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 3028 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:41:28.097 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:41:28.755 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@102cec62: startup date [Mon Jan 15 10:41:28 CST 2018]; root of context hierarchy
+2018-01-15 10:41:29.340 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:42:29.097 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 11556 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:42:29.098 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:42:29.552 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@102cec62: startup date [Mon Jan 15 10:42:29 CST 2018]; root of context hierarchy
+2018-01-15 10:42:29.805 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:42:31.526 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:42:31.526 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:42:31.998 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 10:42:32.948 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 10:42:33.053 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:42:33.056 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:42:33.056 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:42:33.056 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:42:33.057 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 10:42:33.058 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:42:33.617 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 10:42:33.623 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 10:42:33.628 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$ba956920] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:42:33.643 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 10:42:33.681 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 10:42:33.684 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:42:35.204 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:42:35.224 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:42:35.227 [main] WARN  o.s.w.c.s.GenericWebApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+2018-01-15 10:42:35.227 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 10:42:35.246 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-15 10:42:35.286 [main] ERROR o.s.boot.SpringApplication -Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.getRequiredProperty(DefaultLazyEncryptor.java:69)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.createDefault(DefaultLazyEncryptor.java:45)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$null$2(DefaultLazyEncryptor.java:34)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$new$3(DefaultLazyEncryptor.java:32)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.lambda$new$1(Singleton.java:20)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.get(Singleton.java:31)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+2018-01-15 10:42:35.310 [main] ERROR o.s.test.context.TestContextManager -Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@306279ee] to prepare test instance [EncryPlaceholderConfigurerTest@7a687d8d]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.getRequiredProperty(DefaultLazyEncryptor.java:69)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.createDefault(DefaultLazyEncryptor.java:45)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$null$2(DefaultLazyEncryptor.java:34)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$new$3(DefaultLazyEncryptor.java:32)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.lambda$new$1(Singleton.java:20)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.get(Singleton.java:31)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+2018-01-15 10:44:09.673 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 6112 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:44:09.675 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:44:10.001 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:44:10 CST 2018]; root of context hierarchy
+2018-01-15 10:44:10.411 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:44:11.434 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:44:11.435 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:44:11.763 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 10:44:12.624 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 10:44:12.726 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:44:12.728 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:44:12.728 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:44:12.729 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:44:12.731 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 10:44:12.733 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:44:13.228 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 10:44:13.236 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 10:44:13.241 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$26be2aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:44:13.255 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 10:44:13.281 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 10:44:13.282 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:44:14.686 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:44:14.704 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2018-01-15 10:44:14.705 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2018-01-15 10:44:14.705 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2018-01-15 10:44:14.705 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2018-01-15 10:44:14.705 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2018-01-15 10:44:14.718 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2018-01-15 10:44:15.375 [main] WARN  o.s.w.c.s.GenericWebApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+2018-01-15 10:44:15.375 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 10:44:15.393 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-15 10:44:15.424 [main] ERROR o.s.boot.SpringApplication -Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:37)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.jasypt.exceptions.EncryptionOperationNotPossibleException: null
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.decrypt(StandardPBEByteEncryptor.java:974)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.decrypt(StandardPBEStringEncryptor.java:725)
+	at org.jasypt.encryption.pbe.PooledPBEStringEncryptor.decrypt(PooledPBEStringEncryptor.java:498)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	... 54 common frames omitted
+2018-01-15 10:44:15.431 [main] ERROR o.s.test.context.TestContextManager -Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@306279ee] to prepare test instance [EncryPlaceholderConfigurerTest@182e7eda]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:37)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.jasypt.exceptions.EncryptionOperationNotPossibleException: null
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.decrypt(StandardPBEByteEncryptor.java:974)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.decrypt(StandardPBEStringEncryptor.java:725)
+	at org.jasypt.encryption.pbe.PooledPBEStringEncryptor.decrypt(PooledPBEStringEncryptor.java:498)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	... 54 common frames omitted
+2018-01-15 10:48:09.224 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 15140 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:48:09.227 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:48:09.765 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:48:09 CST 2018]; root of context hierarchy
+2018-01-15 10:48:09.997 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:48:11.249 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:48:11.250 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:48:11.588 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 10:48:12.598 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 10:48:12.701 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:48:12.703 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:48:12.703 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:48:12.704 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:48:12.705 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 10:48:12.706 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:48:13.178 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 10:48:13.186 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 10:48:13.192 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$d5ec46de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:48:13.205 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 10:48:13.227 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 10:48:13.227 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:48:14.809 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:48:14.828 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:48:14.830 [main] WARN  o.s.w.c.s.GenericWebApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+2018-01-15 10:48:14.831 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 10:48:14.849 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-15 10:48:14.861 [main] ERROR o.s.boot.SpringApplication -Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.getRequiredProperty(DefaultLazyEncryptor.java:69)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.createDefault(DefaultLazyEncryptor.java:45)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$null$2(DefaultLazyEncryptor.java:34)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$new$3(DefaultLazyEncryptor.java:32)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.lambda$new$1(Singleton.java:20)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.get(Singleton.java:31)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+2018-01-15 10:48:14.865 [main] ERROR o.s.test.context.TestContextManager -Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@306279ee] to prepare test instance [EncryPlaceholderConfigurerTest@a6e4897]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalStateException: Required Encryption configuration property missing: jasypt.encryptor.password
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.getRequiredProperty(DefaultLazyEncryptor.java:69)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.createDefault(DefaultLazyEncryptor.java:45)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$null$2(DefaultLazyEncryptor.java:34)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.lambda$new$3(DefaultLazyEncryptor.java:32)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.lambda$new$1(Singleton.java:20)
+	at com.ulisesbocchio.jasyptspringboot.util.Singleton.get(Singleton.java:31)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+2018-01-15 10:52:27.829 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 4656 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:52:27.833 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:52:28.297 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:52:28 CST 2018]; root of context hierarchy
+2018-01-15 10:52:28.451 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:52:29.718 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:52:29.719 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:52:30.084 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 10:52:30.915 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 10:52:31.016 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:52:31.017 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:52:31.018 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:52:31.019 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:52:31.019 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 10:52:31.021 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:52:31.368 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 10:52:31.373 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 10:52:31.378 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$d5ec46de] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:52:31.391 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 10:52:31.416 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 10:52:31.424 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:52:32.806 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2018-01-15 10:52:32.826 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2018-01-15 10:52:32.826 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2018-01-15 10:52:32.826 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2018-01-15 10:52:32.827 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2018-01-15 10:52:32.827 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2018-01-15 10:52:32.838 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2018-01-15 10:52:33.476 [main] WARN  o.s.w.c.s.GenericWebApplicationContext -Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+2018-01-15 10:52:33.477 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 10:52:33.496 [main] INFO  o.s.b.a.l.AutoConfigurationReportLoggingInitializer -
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-15 10:52:33.514 [main] ERROR o.s.boot.SpringApplication -Application startup failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:37)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.jasypt.exceptions.EncryptionOperationNotPossibleException: null
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.decrypt(StandardPBEByteEncryptor.java:974)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.decrypt(StandardPBEStringEncryptor.java:725)
+	at org.jasypt.encryption.pbe.PooledPBEStringEncryptor.decrypt(PooledPBEStringEncryptor.java:498)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	... 54 common frames omitted
+2018-01-15 10:52:33.518 [main] ERROR o.s.test.context.TestContextManager -Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@306279ee] to prepare test instance [EncryPlaceholderConfigurerTest@79a13920]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testDb01Config': Could not bind properties to TestDb01Config (prefix=spring.datasource.db01, ignoreInvalidFields=false, ignoreUnknownFields=true, ignoreNestedProperties=false); nested exception is com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:334)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:291)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:409)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:120)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 common frames omitted
+Caused by: com.ulisesbocchio.jasyptspringboot.exception.DecryptionException: Decryption of Properties failed,  make sure encryption/decryption passwords match
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:37)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultLazyPropertyResolver.resolvePropertyValue(DefaultLazyPropertyResolver.java:41)
+	at com.ulisesbocchio.jasyptspringboot.EncryptablePropertySource.getProperty(EncryptablePropertySource.java:16)
+	at com.ulisesbocchio.jasyptspringboot.wrapper.EncryptableMapPropertySourceWrapper.getProperty(EncryptableMapPropertySourceWrapper.java:30)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.getEnumerableProperty(PropertySourcesPropertyValues.java:165)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processEnumerablePropertySource(PropertySourcesPropertyValues.java:148)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.processPropertySource(PropertySourcesPropertyValues.java:127)
+	at org.springframework.boot.bind.PropertySourcesPropertyValues.<init>(PropertySourcesPropertyValues.java:117)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.getPropertySourcesPropertyValues(PropertiesConfigurationFactory.java:316)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.doBindPropertiesToTarget(PropertiesConfigurationFactory.java:270)
+	at org.springframework.boot.bind.PropertiesConfigurationFactory.bindPropertiesToTarget(PropertiesConfigurationFactory.java:240)
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:329)
+	... 43 common frames omitted
+Caused by: org.jasypt.exceptions.EncryptionOperationNotPossibleException: null
+	at org.jasypt.encryption.pbe.StandardPBEByteEncryptor.decrypt(StandardPBEByteEncryptor.java:974)
+	at org.jasypt.encryption.pbe.StandardPBEStringEncryptor.decrypt(StandardPBEStringEncryptor.java:725)
+	at org.jasypt.encryption.pbe.PooledPBEStringEncryptor.decrypt(PooledPBEStringEncryptor.java:498)
+	at com.ulisesbocchio.jasyptspringboot.encryptor.DefaultLazyEncryptor.decrypt(DefaultLazyEncryptor.java:81)
+	at com.ulisesbocchio.jasyptspringboot.resolver.DefaultPropertyResolver.resolvePropertyValue(DefaultPropertyResolver.java:35)
+	... 54 common frames omitted
+2018-01-15 10:54:41.630 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 5772 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 10:54:41.634 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 10:54:42.098 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:54:42 CST 2018]; root of context hierarchy
+2018-01-15 10:54:42.380 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 10:54:43.416 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:54:43.418 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 10:54:43.795 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 10:54:44.683 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 10:54:44.812 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:54:44.814 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:54:44.815 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:54:44.815 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:54:44.816 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 10:54:44.818 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 10:54:45.167 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 10:54:45.174 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 10:54:45.179 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$e80f5a7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:54:45.193 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 10:54:45.212 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 10:54:45.213 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 10:54:46.702 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Found Custom Encryptor Bean com.liu.springboot.quickstart.util.DefaultEncryptor@6f5bd362 with name: jasyptStringEncryptor
+2018-01-15 10:54:49.652 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2018-01-15 10:54:50.967 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2018-01-15 10:54:50.998 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2018-01-15 10:54:51.000 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2018-01-15 10:54:51.001 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2018-01-15 10:54:51.002 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2018-01-15 10:54:51.002 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2018-01-15 10:54:51.003 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2018-01-15 10:54:51.003 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2018-01-15 10:54:51.095 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2018-01-15 10:54:51.096 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2018-01-15 10:54:51.099 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2018-01-15 10:54:51.106 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2018-01-15 10:54:51.108 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2018-01-15 10:54:51.108 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\test-classes;E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\redisson\redisson\3.5.7\redisson-3.5.7.jar;F:\maven_pro_lgh\io\netty\netty-common\4.1.17.Final\netty-common-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-codec\4.1.17.Final\netty-codec-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-buffer\4.1.17.Final\netty-buffer-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-transport\4.1.17.Final\netty-transport-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-resolver\4.1.17.Final\netty-resolver-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-resolver-dns\4.1.17.Final\netty-resolver-dns-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-codec-dns\4.1.17.Final\netty-codec-dns-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-handler\4.1.17.Final\netty-handler-4.1.17.Final.jar;F:\maven_pro_lgh\javax\cache\cache-api\1.0.0\cache-api-1.0.0.jar;F:\maven_pro_lgh\io\projectreactor\reactor-core\2.0.8.RELEASE\reactor-core-2.0.8.RELEASE.jar;F:\maven_pro_lgh\org\reactivestreams\reactive-streams\1.0.0\reactive-streams-1.0.0.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.8.9\jackson-dataformat-yaml-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\net\openhft\zero-allocation-hashing\0.8\zero-allocation-hashing-0.8.jar;F:\maven_pro_lgh\net\bytebuddy\byte-buddy\1.6.14\byte-buddy-1.6.14.jar;F:\maven_pro_lgh\org\jodd\jodd-bean\3.7.1\jodd-bean-3.7.1.jar;F:\maven_pro_lgh\org\jodd\jodd-core\3.7.1\jodd-core-3.7.1.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-test\1.5.6.RELEASE\spring-boot-starter-test-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-test\1.5.6.RELEASE\spring-boot-test-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-test-autoconfigure\1.5.6.RELEASE\spring-boot-test-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;F:\maven_pro_lgh\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;F:\maven_pro_lgh\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;F:\maven_pro_lgh\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;F:\maven_pro_lgh\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;F:\maven_pro_lgh\org\objenesis\objenesis\2.1\objenesis-2.1.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;F:\maven_pro_lgh\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;F:\maven_pro_lgh\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-test\4.3.10.RELEASE\spring-test-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\ulisesbocchio\jasypt-spring-boot-starter\1.14\jasypt-spring-boot-starter-1.14.jar;F:\maven_pro_lgh\com\github\ulisesbocchio\jasypt-spring-boot\1.14\jasypt-spring-boot-1.14.jar;F:\maven_pro_lgh\org\jasypt\jasypt\1.9.2\jasypt-1.9.2.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;G:\eclipse-jee\configuration\org.eclipse.osgi\412\0\.cp;G:\eclipse-jee\configuration\org.eclipse.osgi\411\0\.cp
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\adb;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2018-01-15 10:54:51.109 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2018-01-15 10:54:51.110 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2018-01-15 10:54:51.110 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2018-01-15 10:54:51.110 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2018-01-15 10:54:51.113 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@35af52dc
+2018-01-15 10:54:51.560 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-15 10:54:51.562 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2018-01-15 10:54:51.710 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x160f7b217e80000, negotiated timeout = 10000
+2018-01-15 10:54:51.714 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2018-01-15 10:54:51.750 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2018-01-15 10:54:51.806 [main] INFO  c.l.s.quickstart.util.SpringUtil -========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:54:42 CST 2018]; root of context hierarchy========
+2018-01-15 10:54:51.866 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2018-01-15 10:54:51.869 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2018-01-15 10:54:51.870 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2018-01-15 10:54:51.983 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2018-01-15 10:54:51.987 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog207.log
+2018-01-15 10:54:51.987 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2018-01-15 10:54:51.988 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog207.log
+2018-01-15 10:54:52.048 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2018-01-15 10:54:52.049 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2018-01-15 10:54:52.049 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2018-01-15 10:54:52.058 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2018-01-15 10:54:52.061 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2018-01-15 10:54:52.061 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2018-01-15 10:54:52.061 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2018-01-15 10:54:52.062 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2018-01-15 10:54:52.063 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2018-01-15 10:54:52.176 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@211da640
+2018-01-15 10:54:52.177 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@62b42406
+2018-01-15 10:54:52.641 [main] INFO  c.l.s.q.c.redisconfig.RedisConfig ------RedisCacheManager配置结束-----
+2018-01-15 10:54:53.205 [main] INFO  org.redisson.Version -Redisson 3.5.7
+2018-01-15 10:54:54.606 [redisson-netty-1-4] INFO  o.r.c.p.MasterPubSubConnectionPool -1 connections initialized for /192.168.56.2:6379
+2018-01-15 10:54:54.606 [redisson-netty-1-6] INFO  o.r.c.pool.MasterConnectionPool -3 connections initialized for /192.168.56.2:6379
+2018-01-15 10:55:00.742 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:54:42 CST 2018]; root of context hierarchy
+2018-01-15 10:55:01.649 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/er/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2018-01-15 10:55:01.655 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-01-15 10:55:01.657 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2018-01-15 10:55:01.659 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2018-01-15 10:55:01.666 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-15 10:55:01.667 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-15 10:55:02.747 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 10:55:02.749 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 10:55:02.749 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 10:55:02.813 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in myControllerAdvice
+2018-01-15 10:55:02.967 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 10:55:08.044 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-01-15 10:55:08.359 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2018-01-15 10:55:08.385 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-01-15 10:55:08.416 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2018-01-15 10:55:08.440 [main] INFO  EncryPlaceholderConfigurerTest -Started EncryPlaceholderConfigurerTest in 28.128 seconds (JVM running for 29.286)
+2018-01-15 10:55:08.575 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------创建节点:/myapp/ser/1-----
+2018-01-15 10:55:08.576 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2018-01-15 10:55:08.577 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------创建节点成功！！！-----
+2018-01-15 10:55:08.844 [Thread-5] INFO  o.s.w.c.s.GenericWebApplicationContext -Closing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 10:54:42 CST 2018]; root of context hierarchy
+2018-01-15 10:55:08.848 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor -Stopping beans in phase 2147483647
+2018-01-15 10:55:11.103 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2018-01-15 10:55:11.104 [Thread-5] INFO  org.apache.zookeeper.ZooKeeper -Session: 0x160f7b217e80000 closed
+2018-01-15 10:55:11.107 [Thread-5] INFO  c.a.jdbc.AbstractDataSourceBean -AtomikosDataSoureBean 'db02DataSource': close...
+2018-01-15 10:55:11.111 [Thread-5] INFO  c.a.jdbc.AbstractDataSourceBean -AtomikosDataSoureBean 'db01DataSource': close...
+2018-01-15 10:55:11.116 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 13:55:50.808 [main] INFO  EncryPlaceholderConfigurerTest -Starting EncryPlaceholderConfigurerTest on JerryLiu with PID 12712 (started by xiaoming in E:\JavaWeb\git\springboottest\spring-boot-quickstart)
+2018-01-15 13:55:50.810 [main] INFO  EncryPlaceholderConfigurerTest -The following profiles are active: test
+2018-01-15 13:55:51.318 [main] INFO  o.s.w.c.s.GenericWebApplicationContext -Refreshing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 13:55:51 CST 2018]; root of context hierarchy
+2018-01-15 13:55:51.547 [background-preinit] INFO  o.h.validator.internal.util.Version -HV000001: Hibernate Validator 5.3.5.Final
+2018-01-15 13:55:52.864 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biVideoInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiVideoInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 13:55:52.865 [main] WARN  o.m.s.mapper.ClassPathMapperScanner -Skipping MapperFactoryBean with name 'biZoneInfoMapper' and 'com.liu.springboot.quickstart.dao.basedao.BiZoneInfoMapper' mapperInterface. Bean already defined with the same name!
+2018-01-15 13:55:53.245 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate -Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-01-15 13:55:54.177 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Post-processing PropertySource instances
+2018-01-15 13:55:54.312 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 13:55:54.313 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 13:55:54.313 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemProperties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 13:55:54.313 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource systemEnvironment [org.springframework.core.env.SystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 13:55:54.314 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource random [org.springframework.boot.context.config.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2018-01-15 13:55:54.314 [main] INFO  c.u.j.c.EnableEncryptablePropertiesBeanFactoryPostProcessor -Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2018-01-15 13:55:54.688 [main] INFO  c.u.j.r.DefaultLazyPropertyResolver -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2018-01-15 13:55:54.695 [main] INFO  c.u.j.d.DefaultLazyPropertyDetector -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2018-01-15 13:55:54.702 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskThreadPoolConfig' of type [com.liu.springboot.quickstart.config.webconfig.TaskThreadPoolConfig$$EnhancerBySpringCGLIB$$e80f5a7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 13:55:54.717 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService 
+2018-01-15 13:55:54.773 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor -Initializing ExecutorService  'taskPool'
+2018-01-15 13:55:54.777 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'taskPool' of type [org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-01-15 13:55:56.417 [main] INFO  c.u.j.encryptor.DefaultLazyEncryptor -Found Custom Encryptor Bean com.liu.springboot.quickstart.util.DefaultEncryptor@6f5bd362 with name: jasyptStringEncryptor
+2018-01-15 13:56:00.032 [main] INFO  com.atomikos.logging.LoggerFactory -Using Slf4J for logging.
+2018-01-15 13:56:01.680 [main] INFO  c.l.s.quickstart.task.RedisQueuePool -初始化7个队列工作线程
+2018-01-15 13:56:01.688 [taskExecutor_1] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>0<<开始工作!!!
+2018-01-15 13:56:01.692 [taskExecutor_7] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>6<<开始工作!!!
+2018-01-15 13:56:01.693 [taskExecutor_4] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>3<<开始工作!!!
+2018-01-15 13:56:01.693 [taskExecutor_6] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>5<<开始工作!!!
+2018-01-15 13:56:01.694 [taskExecutor_5] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>4<<开始工作!!!
+2018-01-15 13:56:01.694 [taskExecutor_3] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>2<<开始工作!!!
+2018-01-15 13:56:01.694 [taskExecutor_2] INFO  c.l.s.quickstart.task.RedisQueuePool -reids队列工作线程>>1<<开始工作!!!
+2018-01-15 13:56:01.764 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2018-01-15 13:56:01.765 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:host.name=JerryLiu
+2018-01-15 13:56:01.765 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.version=1.8.0_131
+2018-01-15 13:56:01.765 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.vendor=Oracle Corporation
+2018-01-15 13:56:01.765 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.home=C:\Program Files\Java\java8\jdk1.8.0_131\jre
+2018-01-15 13:56:01.765 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.class.path=E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\test-classes;E:\JavaWeb\git\springboottest\spring-boot-quickstart\target\classes;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-aop\1.5.6.RELEASE\spring-boot-starter-aop-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter\1.5.6.RELEASE\spring-boot-starter-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot\1.5.6.RELEASE\spring-boot-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-autoconfigure\1.5.6.RELEASE\spring-boot-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-logging\1.5.6.RELEASE\spring-boot-starter-logging-1.5.6.RELEASE.jar;F:\maven_pro_lgh\ch\qos\logback\logback-classic\1.1.11\logback-classic-1.1.11.jar;F:\maven_pro_lgh\ch\qos\logback\logback-core\1.1.11\logback-core-1.1.11.jar;F:\maven_pro_lgh\org\slf4j\jul-to-slf4j\1.7.25\jul-to-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\slf4j\log4j-over-slf4j\1.7.25\log4j-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\org\yaml\snakeyaml\1.17\snakeyaml-1.17.jar;F:\maven_pro_lgh\org\springframework\spring-aop\4.3.10.RELEASE\spring-aop-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-beans\4.3.10.RELEASE\spring-beans-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\aspectj\aspectjweaver\1.8.10\aspectjweaver-1.8.10.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-websocket\1.5.6.RELEASE\spring-boot-starter-websocket-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-web\1.5.6.RELEASE\spring-boot-starter-web-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-tomcat\1.5.6.RELEASE\spring-boot-starter-tomcat-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-core\8.5.16\tomcat-embed-core-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-el\8.5.16\tomcat-embed-el-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\embed\tomcat-embed-websocket\8.5.16\tomcat-embed-websocket-8.5.16.jar;F:\maven_pro_lgh\org\hibernate\hibernate-validator\5.3.5.Final\hibernate-validator-5.3.5.Final.jar;F:\maven_pro_lgh\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;F:\maven_pro_lgh\org\jboss\logging\jboss-logging\3.3.1.Final\jboss-logging-3.3.1.Final.jar;F:\maven_pro_lgh\com\fasterxml\classmate\1.3.3\classmate-1.3.3.jar;F:\maven_pro_lgh\org\springframework\spring-web\4.3.10.RELEASE\spring-web-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-webmvc\4.3.10.RELEASE\spring-webmvc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-expression\4.3.10.RELEASE\spring-expression-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-messaging\4.3.10.RELEASE\spring-messaging-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context\4.3.10.RELEASE\spring-context-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-websocket\4.3.10.RELEASE\spring-websocket-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-thymeleaf\1.5.6.RELEASE\spring-boot-starter-thymeleaf-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf-spring4\2.1.5.RELEASE\thymeleaf-spring4-2.1.5.RELEASE.jar;F:\maven_pro_lgh\org\thymeleaf\thymeleaf\2.1.5.RELEASE\thymeleaf-2.1.5.RELEASE.jar;F:\maven_pro_lgh\ognl\ognl\3.0.8\ognl-3.0.8.jar;F:\maven_pro_lgh\org\javassist\javassist\3.21.0-GA\javassist-3.21.0-GA.jar;F:\maven_pro_lgh\org\unbescape\unbescape\1.1.0.RELEASE\unbescape-1.1.0.RELEASE.jar;F:\maven_pro_lgh\nz\net\ultraq\thymeleaf\thymeleaf-layout-dialect\1.4.0\thymeleaf-layout-dialect-1.4.0.jar;F:\maven_pro_lgh\org\codehaus\groovy\groovy\2.4.12\groovy-2.4.12.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-starter\1.3.0\mybatis-spring-boot-starter-1.3.0.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jdbc\1.5.6.RELEASE\spring-boot-starter-jdbc-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-jdbc\8.5.16\tomcat-jdbc-8.5.16.jar;F:\maven_pro_lgh\org\apache\tomcat\tomcat-juli\8.5.16\tomcat-juli-8.5.16.jar;F:\maven_pro_lgh\org\springframework\spring-jdbc\4.3.10.RELEASE\spring-jdbc-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\mybatis\spring\boot\mybatis-spring-boot-autoconfigure\1.3.0\mybatis-spring-boot-autoconfigure-1.3.0.jar;F:\maven_pro_lgh\org\mybatis\mybatis\3.4.4\mybatis-3.4.4.jar;F:\maven_pro_lgh\org\mybatis\mybatis-spring\1.3.1\mybatis-spring-1.3.1.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-redis\1.4.7.RELEASE\spring-boot-starter-redis-1.4.7.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-redis\1.8.6.RELEASE\spring-data-redis-1.8.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-keyvalue\1.2.6.RELEASE\spring-data-keyvalue-1.2.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\data\spring-data-commons\1.13.6.RELEASE\spring-data-commons-1.13.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-tx\4.3.10.RELEASE\spring-tx-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-oxm\4.3.10.RELEASE\spring-oxm-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-context-support\4.3.10.RELEASE\spring-context-support-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;F:\maven_pro_lgh\redis\clients\jedis\2.9.0\jedis-2.9.0.jar;F:\maven_pro_lgh\org\springframework\session\spring-session-data-redis\1.3.1.RELEASE\spring-session-data-redis-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\apache\commons\commons-pool2\2.4.2\commons-pool2-2.4.2.jar;F:\maven_pro_lgh\org\springframework\session\spring-session\1.3.1.RELEASE\spring-session-1.3.1.RELEASE.jar;F:\maven_pro_lgh\org\redisson\redisson\3.5.7\redisson-3.5.7.jar;F:\maven_pro_lgh\io\netty\netty-common\4.1.17.Final\netty-common-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-codec\4.1.17.Final\netty-codec-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-buffer\4.1.17.Final\netty-buffer-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-transport\4.1.17.Final\netty-transport-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-resolver\4.1.17.Final\netty-resolver-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-resolver-dns\4.1.17.Final\netty-resolver-dns-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-codec-dns\4.1.17.Final\netty-codec-dns-4.1.17.Final.jar;F:\maven_pro_lgh\io\netty\netty-handler\4.1.17.Final\netty-handler-4.1.17.Final.jar;F:\maven_pro_lgh\javax\cache\cache-api\1.0.0\cache-api-1.0.0.jar;F:\maven_pro_lgh\io\projectreactor\reactor-core\2.0.8.RELEASE\reactor-core-2.0.8.RELEASE.jar;F:\maven_pro_lgh\org\reactivestreams\reactive-streams\1.0.0\reactive-streams-1.0.0.jar;F:\maven_pro_lgh\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;F:\maven_pro_lgh\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.8.9\jackson-dataformat-yaml-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-core\2.8.9\jackson-core-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-databind\2.8.9\jackson-databind-2.8.9.jar;F:\maven_pro_lgh\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;F:\maven_pro_lgh\net\openhft\zero-allocation-hashing\0.8\zero-allocation-hashing-0.8.jar;F:\maven_pro_lgh\net\bytebuddy\byte-buddy\1.6.14\byte-buddy-1.6.14.jar;F:\maven_pro_lgh\org\jodd\jodd-bean\3.7.1\jodd-bean-3.7.1.jar;F:\maven_pro_lgh\org\jodd\jodd-core\3.7.1\jodd-core-3.7.1.jar;F:\maven_pro_lgh\mysql\mysql-connector-java\5.1.43\mysql-connector-java-5.1.43.jar;F:\maven_pro_lgh\com\alibaba\druid\0.2.9\druid-0.2.9.jar;F:\maven_pro_lgh\com\alibaba\fastjson\1.1.26\fastjson-1.1.26.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-jta-atomikos\1.5.6.RELEASE\spring-boot-starter-jta-atomikos-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\atomikos\transactions-jms\3.9.3\transactions-jms-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jta\3.9.3\transactions-jta-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions\3.9.3\transactions-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-api\3.9.3\transactions-api-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\atomikos-util\3.9.3\atomikos-util-3.9.3.jar;F:\maven_pro_lgh\com\atomikos\transactions-jdbc\3.9.3\transactions-jdbc-3.9.3.jar;F:\maven_pro_lgh\javax\transaction\javax.transaction-api\1.2\javax.transaction-api-1.2.jar;F:\maven_pro_lgh\com\github\pagehelper\pagehelper\4.1.6\pagehelper-4.1.6.jar;F:\maven_pro_lgh\com\github\jsqlparser\jsqlparser\0.9.5\jsqlparser-0.9.5.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-starter-test\1.5.6.RELEASE\spring-boot-starter-test-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-test\1.5.6.RELEASE\spring-boot-test-1.5.6.RELEASE.jar;F:\maven_pro_lgh\org\springframework\boot\spring-boot-test-autoconfigure\1.5.6.RELEASE\spring-boot-test-autoconfigure-1.5.6.RELEASE.jar;F:\maven_pro_lgh\com\jayway\jsonpath\json-path\2.2.0\json-path-2.2.0.jar;F:\maven_pro_lgh\net\minidev\json-smart\2.2.1\json-smart-2.2.1.jar;F:\maven_pro_lgh\net\minidev\accessors-smart\1.1\accessors-smart-1.1.jar;F:\maven_pro_lgh\org\ow2\asm\asm\5.0.3\asm-5.0.3.jar;F:\maven_pro_lgh\junit\junit\4.12\junit-4.12.jar;F:\maven_pro_lgh\org\assertj\assertj-core\2.6.0\assertj-core-2.6.0.jar;F:\maven_pro_lgh\org\mockito\mockito-core\1.10.19\mockito-core-1.10.19.jar;F:\maven_pro_lgh\org\objenesis\objenesis\2.1\objenesis-2.1.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;F:\maven_pro_lgh\org\hamcrest\hamcrest-library\1.3\hamcrest-library-1.3.jar;F:\maven_pro_lgh\org\skyscreamer\jsonassert\1.4.0\jsonassert-1.4.0.jar;F:\maven_pro_lgh\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;F:\maven_pro_lgh\org\springframework\spring-core\4.3.10.RELEASE\spring-core-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\springframework\spring-test\4.3.10.RELEASE\spring-test-4.3.10.RELEASE.jar;F:\maven_pro_lgh\org\apache\zookeeper\zookeeper\3.4.6\zookeeper-3.4.6.jar;F:\maven_pro_lgh\log4j\log4j\1.2.16\log4j-1.2.16.jar;F:\maven_pro_lgh\jline\jline\0.9.94\jline-0.9.94.jar;F:\maven_pro_lgh\io\netty\netty\3.7.0.Final\netty-3.7.0.Final.jar;F:\maven_pro_lgh\com\github\ulisesbocchio\jasypt-spring-boot-starter\1.14\jasypt-spring-boot-starter-1.14.jar;F:\maven_pro_lgh\com\github\ulisesbocchio\jasypt-spring-boot\1.14\jasypt-spring-boot-1.14.jar;F:\maven_pro_lgh\org\jasypt\jasypt\1.9.2\jasypt-1.9.2.jar;F:\maven_pro_lgh\com\github\abel533\mapper\3.0.0\mapper-3.0.0.jar;F:\maven_pro_lgh\javax\persistence\persistence-api\1.0\persistence-api-1.0.jar;F:\maven_pro_lgh\commons-beanutils\commons-beanutils\1.9.3\commons-beanutils-1.9.3.jar;F:\maven_pro_lgh\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;G:\eclipse-jee\configuration\org.eclipse.osgi\412\0\.cp;G:\eclipse-jee\configuration\org.eclipse.osgi\411\0\.cp
+2018-01-15 13:56:01.766 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.library.path=C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/java8/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\java8\jdk1.8.0_131\bin;C:\Program Files (x86)\Common Files\NetSarang;C:\PROGRAM FILES (X86)\INTEL\ICLS CLIENT\;C:\PROGRAM FILES\INTEL\ICLS CLIENT\;C:\WINDOWS\SYSTEM32;C:\WINDOWS;C:\WINDOWS\SYSTEM32\WBEM;C:\WINDOWS\SYSTEM32\WINDOWSPOWERSHELL\V1.0\;C:\PROGRAM FILES\TORTOISESVN\BIN;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL;C:\PROGRAM FILES (X86)\INTEL\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT;C:\Program Files\Lenovo\Bluetooth Software\;C:\Program Files\Lenovo\Bluetooth Software\syswow64;D:\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\scala-2.10.6\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;D:\adb;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;G:\eclipse-jee;;.
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.io.tmpdir=C:\Users\admin\AppData\Local\Temp\
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:java.compiler=<NA>
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.name=Windows 10
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.arch=amd64
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:os.version=10.0
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.name=xiaoming
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.home=C:\Users\admin
+2018-01-15 13:56:01.767 [main] INFO  org.apache.zookeeper.ZooKeeper -Client environment:user.dir=E:\JavaWeb\git\springboottest\spring-boot-quickstart
+2018-01-15 13:56:01.794 [main] INFO  org.apache.zookeeper.ZooKeeper -Initiating client connection, connectString=192.168.56.2:2181 sessionTimeout=10000 watcher=com.liu.springboot.quickstart.util.ZookeeperOperator@1b485c8b
+2018-01-15 13:56:02.199 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Opening socket connection to server 192.168.56.2/192.168.56.2:2181. Will not attempt to authenticate using SASL (unknown error)
+2018-01-15 13:56:02.201 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Socket connection established to 192.168.56.2/192.168.56.2:2181, initiating session
+2018-01-15 13:56:02.221 [main-SendThread(192.168.56.2:2181)] INFO  org.apache.zookeeper.ClientCnxn -Session establishment complete on server 192.168.56.2/192.168.56.2:2181, sessionid = 0x160f7b217e80001, negotiated timeout = 10000
+2018-01-15 13:56:02.224 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------成功连接zookeeper服务器-----
+2018-01-15 13:56:02.251 [main] INFO  c.l.s.q.util.ZookeeperOperator ------初始化ZookeeperOperator服务成功-----
+2018-01-15 13:56:02.358 [main] INFO  c.l.s.quickstart.util.SpringUtil -========ApplicationContext配置成功,在普通类可以通过调用SpringUtils.getAppContext()获取applicationContext对象,applicationContext=org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 13:55:51 CST 2018]; root of context hierarchy========
+2018-01-15 13:56:02.440 [main] WARN  c.a.i.c.UserTransactionServiceImp -No properties path set - looking for transactions.properties in classpath...
+2018-01-15 13:56:02.442 [main] WARN  c.a.i.c.UserTransactionServiceImp -transactions.properties not found - looking for jta.properties in classpath...
+2018-01-15 13:56:02.443 [main] WARN  c.a.i.c.UserTransactionServiceImp -Using init file: /E:/JavaWeb/git/springboottest/spring-boot-quickstart/target/classes/jta.properties
+2018-01-15 13:56:02.554 [main] INFO  c.a.p.imp.StateRecoveryManagerImp -com.atomikos.persistence.imp.WriteAheadObjectLog instantiation failed - falling back to default
+2018-01-15 13:56:02.558 [main] INFO  c.a.persistence.imp.FileLogStream -Starting read of logfile E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog208.log
+2018-01-15 13:56:02.558 [main] INFO  c.a.persistence.imp.FileLogStream -Done read of logfile
+2018-01-15 13:56:02.558 [main] INFO  c.a.p.imp.AbstractLogStream -Logfile closed: E:\JavaWeb\git\springboottest\spring-boot-quickstart\.\txlog208.log
+2018-01-15 13:56:02.608 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING core version: 3.9.3
+2018-01-15 13:56:02.608 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_file_name = tx.out.log
+2018-01-15 13:56:02.608 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.automatic_resource_registration = true
+2018-01-15 13:56:02.608 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.client_demarcation = false
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.threaded_2pc = false
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serial_jta_transactions = true
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.serializable_logging = true
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_dir = .\
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.console_log_level = DEBUG
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_actives = 50
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.checkpoint_interval = 500
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.enable_logging = true
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.output_dir = .\
+2018-01-15 13:56:02.609 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.log_base_name = txlog
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.max_timeout = 300000
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING java.naming.provider.url = rmi://localhost:1099
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.force_shutdown_on_vm_exit = false
+2018-01-15 13:56:02.610 [main] INFO  c.a.i.c.i.AbstractUserTransactionService -USING com.atomikos.icatch.default_jta_timeout = 10000
+2018-01-15 13:56:02.708 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@12e2f5ab
+2018-01-15 13:56:02.709 [main] INFO  o.s.t.jta.JtaTransactionManager -Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@48f4f03e
+2018-01-15 13:56:03.156 [main] INFO  c.l.s.q.c.redisconfig.RedisConfig ------RedisCacheManager配置结束-----
+2018-01-15 13:56:03.614 [main] INFO  org.redisson.Version -Redisson 3.5.7
+2018-01-15 13:56:05.054 [redisson-netty-1-4] INFO  o.r.c.p.MasterPubSubConnectionPool -1 connections initialized for /192.168.56.2:6379
+2018-01-15 13:56:05.054 [redisson-netty-1-5] INFO  o.r.c.pool.MasterConnectionPool -3 connections initialized for /192.168.56.2:6379
+2018-01-15 13:56:11.500 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 13:55:51 CST 2018]; root of context hierarchy
+2018-01-15 13:56:11.921 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/er/{errorCode}]}" onto public java.lang.String com.liu.springboot.quickstart.controller.DefErrorController.defaultErrorHandler(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>,java.lang.String)
+2018-01-15 13:56:11.925 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/index]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.index(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+2018-01-15 13:56:11.925 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/json]}" onto public java.util.Map<java.lang.String, java.lang.Object> com.liu.springboot.quickstart.controller.IndexController.getJson()
+2018-01-15 13:56:11.926 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/toSocket]}" onto public java.lang.String com.liu.springboot.quickstart.controller.IndexController.toSocket(java.util.Map<java.lang.String, java.lang.Object>)
+2018-01-15 13:56:11.931 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-15 13:56:11.932 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-15 13:56:12.458 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/res/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 13:56:12.459 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 13:56:12.460 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 13:56:12.528 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -Detected @ExceptionHandler methods in myControllerAdvice
+2018-01-15 13:56:12.690 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-15 13:56:16.582 [main] WARN  o.s.b.s.r.RedisStarterDeprecationWarningAutoConfiguration -spring-boot-starter-redis is deprecated as of Spring Boot 1.4, please migrate to spring-boot-starter-data-redis
+2018-01-15 13:56:16.930 [main] INFO  o.s.c.s.DefaultLifecycleProcessor -Starting beans in phase 2147483647
+2018-01-15 13:56:16.970 [main] INFO  o.s.s.a.ScheduledAnnotationBeanPostProcessor -No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2018-01-15 13:56:17.056 [main] INFO  EncryPlaceholderConfigurerTest -Started EncryPlaceholderConfigurerTest in 27.257 seconds (JVM running for 28.381)
+2018-01-15 13:56:17.097 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------开启节点注册:/myapp/ser/1-----
+2018-01-15 13:56:17.265 [Thread-5] INFO  o.s.w.c.s.GenericWebApplicationContext -Closing org.springframework.web.context.support.GenericWebApplicationContext@24c22fe: startup date [Mon Jan 15 13:55:51 CST 2018]; root of context hierarchy
+2018-01-15 13:56:17.268 [Thread-5] INFO  o.s.c.s.DefaultLifecycleProcessor -Stopping beans in phase 2147483647
+2018-01-15 13:56:17.316 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------创建节点:/myapp/ser/1-----
+2018-01-15 13:56:17.316 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2018-01-15 13:56:17.317 [taskExecutor_8] INFO  c.l.s.quickstart.task.work.SignInSer ------创建节点成功！！！-----
+2018-01-15 13:56:19.646 [main-EventThread] INFO  c.l.s.q.util.ZookeeperOperator ------有server(/myapp/ser)加入或停止-----
+2018-01-15 13:56:19.652 [Thread-5] INFO  org.apache.zookeeper.ZooKeeper -Session: 0x160f7b217e80001 closed
+2018-01-15 13:56:19.654 [Thread-5] INFO  c.a.jdbc.AbstractDataSourceBean -AtomikosDataSoureBean 'db02DataSource': close...
+2018-01-15 13:56:19.656 [Thread-5] INFO  c.a.jdbc.AbstractDataSourceBean -AtomikosDataSoureBean 'db01DataSource': close...
+2018-01-15 13:56:19.662 [Thread-5] INFO  o.s.s.c.ThreadPoolTaskExecutor -Shutting down ExecutorService 'taskPool'
+2018-01-15 13:56:19.666 [taskExecutor_8] ERROR c.l.s.quickstart.task.work.SignInSer -注册节点失败!!!!--InterruptedException：
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:34)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2018-01-15 13:56:19.668 [taskExecutor_8] ERROR c.l.s.q.c.w.TaskThreadPoolConfig -==========================null=======================
+java.lang.NullPointerException: null
+	at com.liu.springboot.quickstart.util.ZookeeperOperator.checkChild(ZookeeperOperator.java:197)
+	at com.liu.springboot.quickstart.task.work.SignInSer.run(SignInSer.java:27)
+	at com.liu.springboot.quickstart.task.work.SignInSer$$FastClassBySpringCGLIB$$2b3524fd.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:738)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.aop.interceptor.AsyncExecutionInterceptor$1.call(AsyncExecutionInterceptor.java:115)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+2018-01-15 13:56:19.669 [taskExecutor_8] ERROR c.l.s.q.c.w.TaskThreadPoolConfig -exception method:run

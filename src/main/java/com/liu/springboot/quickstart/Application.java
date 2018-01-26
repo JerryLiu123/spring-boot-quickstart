@@ -1,7 +1,5 @@
 package com.liu.springboot.quickstart;
 
-import org.apache.log4j.Logger;
-import org.apache.tomcat.jni.Thread;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +9,6 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
-
-import com.liu.springboot.quickstart.task.work.SignInSer;
-import com.liu.springboot.quickstart.util.SpringUtil;
 
 /**
  * soring boot 启动的主类~
@@ -28,7 +23,6 @@ import com.liu.springboot.quickstart.util.SpringUtil;
 @ServletComponentScan //扫描监听器注解
 public class Application extends SpringBootServletInitializer implements EmbeddedServletContainerCustomizer {
 
-	private static Logger logger = Logger.getLogger(Application.class);
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer arg0) {
 		// TODO Auto-generated method stub

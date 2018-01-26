@@ -2,6 +2,10 @@ package com.liu.springboot.quickstart.aop;
 
 import org.springframework.aop.ThrowsAdvice;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+
+import groovyjarjarasm.asm.commons.Method;
+
 import org.apache.log4j.Logger;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,7 +13,7 @@ import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 @Configuration
-public class ExceptionHandler implements ThrowsAdvice {
+public class ExceptionHandler implements ThrowsAdvice, Ordered {
 
 	private static Logger LOGGER =  Logger.getLogger(ExceptionHandler.class);
 	/**
@@ -33,4 +37,10 @@ public class ExceptionHandler implements ThrowsAdvice {
 		// TODO Auto-generated method stub
 
 	}
+
+    @Override
+    public int getOrder() {
+        // TODO Auto-generated method stub
+        return 1;
+    }
 }

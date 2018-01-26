@@ -2,6 +2,7 @@ package com.liu.springboot.quickstart.controller;
 
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.stereotype.Component;
@@ -12,6 +13,8 @@ import com.liu.springboot.quickstart.config.ConstantsConfig;
 
 @Component
 public class BaseController {
+    
+    private static Logger logger = Logger.getLogger(BaseController.class);
     
     @Autowired
     ResourceUrlProvider resourceUrlProvider;
@@ -31,7 +34,7 @@ public class BaseController {
      */
     @ModelAttribute("urls")
     public ResourceUrlProvider urls() {
-        System.out.println("-----获得静态资源MD5-----");
+        logger.info("-----获得静态资源MD5-----");
         return this.resourceUrlProvider;
     }
 }

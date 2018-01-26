@@ -11,14 +11,22 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Aspect
 @Component//将bean 实例化到spring中
-public class ParameterNotBlankAop {
+public class ParameterNotBlankAop implements Ordered{
 	
 	
+    
+    /**
+     * @annotation(M)：当方法上有注解@M时匹配
+     * @args(M):当方法的参数上有@M注解的类或子类时匹配
+     * @within(M):匹配标注了@M的类和子类的所有方法
+     * @target(M):匹配标注了@M的类的所有方法
+     */
 	@Pointcut("@annotation(com.liu.springboot.quickstart.aop.annotation.ParameterNotBlank)")
 	public void parameterNotBlank(){}
 	
@@ -69,4 +77,10 @@ public class ParameterNotBlankAop {
 			}
 		}
 	}
+
+    @Override
+    public int getOrder() {
+        // TODO Auto-generated method stub
+        return 2;
+    }
 }

@@ -44,7 +44,6 @@ public class RedisTest extends BaseTest {
 			System.err.println("判断redis信息>>>"+redisService.exists("123"));
 			Thread.sleep(15000);
 			RQueue<IQueueTask> rQueue = redissonClient.getQueue("key");//获得队列
-			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

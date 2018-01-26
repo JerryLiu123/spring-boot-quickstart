@@ -34,7 +34,6 @@ public class WebSocketHandler {
     @OnOpen
     public void onOpen(Session session, @PathParam(value="userId")String userId) {
         try {
-            //为当前客户端建立一个唯一的uuid的用户编号
             sockClient.put(userId, session);
             session.getBasicRemote().sendText("连接成功...,当前账户为:"+userId);
             sum.addAndGet(1);
