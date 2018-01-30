@@ -51,11 +51,11 @@ public class DESUtils {
      * @return
      */
     public static String getDecryptString(String str) {
-        BASE64Decoder base64en = new BASE64Decoder();
+        BASE64Decoder base64de = new BASE64Decoder();
         try {
-            byte[] strbyte = base64en.decodeBuffer(str);
+            byte[] strbyte = base64de.decodeBuffer(str);
             Cipher cipher = Cipher.getInstance("DES");
-            cipher.init(Cipher.ENCRYPT_MODE, key);
+            cipher.init(Cipher.DECRYPT_MODE, key);
             byte[] decryptStrBytes = cipher.doFinal(strbyte);
             return new String(decryptStrBytes, "UTF-8");
         } catch (Exception e) {
@@ -65,5 +65,6 @@ public class DESUtils {
     }
 //    public static void main(String[] args) {
 //        System.out.println(DESUtils.getEncryptString("123456"));
+//        System.out.println(DESUtils.getDecryptString("xfcqz2HNCeY="));
 //    }
 }

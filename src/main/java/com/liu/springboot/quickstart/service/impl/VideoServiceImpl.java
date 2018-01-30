@@ -5,8 +5,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.jta.atomikos.AtomikosDataSourceBean;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.annotation.Isolation;
@@ -21,6 +25,7 @@ import com.liu.springboot.quickstart.model.BiVideoInfo;
 import com.liu.springboot.quickstart.model.BiZoneInfo;
 import com.liu.springboot.quickstart.service.IVideoService;
 import com.liu.springboot.quickstart.util.dynamicdatasource.CustomerContextHolder;
+import com.liu.springboot.quickstart.util.dynamicdatasource.DBEnum;
 
 
 @Service(value="videoService")
@@ -31,6 +36,8 @@ public class VideoServiceImpl implements IVideoService {
 	private BiVideoInfoMapper videoMapper;
 	@Autowired
 	private BiZoneInfoMapper zoneMapper;
+	@Autowired
+	private DataSource db01DataSource;
 //	@Autowired
 //	private RedisService redisService;
 //	@Autowired
@@ -59,9 +66,11 @@ public class VideoServiceImpl implements IVideoService {
 //		return videoMapper.selectByPrimaryKey(id);
 //	}
 
-	@Transactional(rollbackFor=java.lang.Exception.class, 
-			isolation=Isolation.READ_UNCOMMITTED, 
-			propagation=Propagation.REQUIRES_NEW)
+//	@Transactional(rollbackFor=java.lang.Exception.class, 
+//			isolation=Isolation.READ_UNCOMMITTED, 
+//			propagation=Propagation.REQUIRES_NEW)
+	@Transactional(transactionManager="transactionManager", 
+	        rollbackFor=java.lang.Exception.class)
 	public void testException() throws Exception {
 		// TODO Auto-generated method stub
 		/*
@@ -100,19 +109,19 @@ public class VideoServiceImpl implements IVideoService {
 		 * 在 AbstractPlatformTransactionManager.getTransaction(TransactionDefinition definition)中看到isolationLevel已经被修改了，值为1但是没有效果啊！！！
 		 * TransactionSynchronizationManager中currentTransactionIsolationLevel也赋值了~~~操！！！！
 		 * */
-		
-		
+	    AtomikosDataSourceBean a = (AtomikosDataSourceBean)db01DataSource;
+		System.err.println(a.poolAvailableSize());
 		//休眠等待线程2插入结束
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		System.err.println("---------线程1未提交事务查询开始---------");
 		//执行切换数据源前的查询
-		CustomerContextHolder.setContextType(ConstantsConfig.DATESOURCE1);
+		//CustomerContextHolder.setContextType(DBEnum.dataMySQL1);
 		List<BiZoneInfo> listDB1 = zoneMapper.selectUpdateHDFS();
 		
-		CustomerContextHolder.setContextType(ConstantsConfig.DATESOURCE2);
+		//CustomerContextHolder.setContextType(DBEnum.dataMySQL2);
 		//执行切换数据源后的查询
 		List<BiZoneInfo> listDB2 = zoneMapper.selectUpdateHDFS();
-		
+		System.err.println(a.poolAvailableSize());
 		//分别输出两个查询的数据
 		System.out.println("------------db1中数据输出开始------------");
 		for(BiZoneInfo db1 : listDB1) {
@@ -128,14 +137,14 @@ public class VideoServiceImpl implements IVideoService {
 		System.err.println("---------线程1未提交事务查询结束---------");
 		
 		//休眠等待线程2执行结束
-		Thread.sleep(6000);
+		//Thread.sleep(6000);
 		//再次查询
 		System.err.println("》》》》》》》》》》》》》》》线程1提交事务查询开始《《《《《《《《《《《《《");
-		CustomerContextHolder.setContextType(ConstantsConfig.DATESOURCE1);
+		//CustomerContextHolder.setContextType(DBEnum.dataMySQL1);
 		//执行切换数据源前的查询
 		List<BiZoneInfo> listDB3 = zoneMapper.selectUpdateHDFS();
 		
-		CustomerContextHolder.setContextType(ConstantsConfig.DATESOURCE2);
+		//CustomerContextHolder.setContextType(DBEnum.dataMySQL2);
 		//执行切换数据源后的查询
 		List<BiZoneInfo> listDB4 = zoneMapper.selectUpdateHDFS();
 		
@@ -155,9 +164,7 @@ public class VideoServiceImpl implements IVideoService {
 		
 	}
 	
-	@Transactional(rollbackFor=java.lang.Exception.class, 
-					isolation=Isolation.READ_COMMITTED, 
-					propagation=Propagation.REQUIRES_NEW)
+	@Transactional(rollbackFor=java.lang.Exception.class)
 	public void testException2() throws Exception {
 		// TODO Auto-generated method stub
 		
@@ -195,12 +202,12 @@ public class VideoServiceImpl implements IVideoService {
 		biZoneInfo2.setzHdfsfile("testHdfsFile4");
 		biZoneInfo2.setzIsdel(44444);
 		//切换数据源
-		CustomerContextHolder.setContextType(ConstantsConfig.DATESOURCE2);
+		CustomerContextHolder.setContextType(DBEnum.dataMySQL2);
 		System.out.println("---线程2插入数据库操作---B");
 		zoneMapper.insert(biZoneInfo2);
 		
 		System.err.println("-------------线程2！！！插入成功！！！未提交事务!!!!-------------");
-		Thread.sleep(3000);
+		//Thread.sleep(3000);
 //		CustomerContextHolder.setContextType(Constants.DATESOURCE2);
 //		//执行切换数据源后的查询
 //		List<BiZoneInfo> listDB4 = zoneMapper.selectUpdateHDFS();

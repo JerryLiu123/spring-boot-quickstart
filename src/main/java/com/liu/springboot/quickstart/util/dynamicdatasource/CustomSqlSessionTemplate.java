@@ -71,8 +71,8 @@ public class CustomSqlSessionTemplate extends SqlSessionTemplate {
     
     public CustomSqlSessionTemplate(SqlSessionFactory sqlSessionFactory, ExecutorType executorType,  
             PersistenceExceptionTranslator exceptionTranslator) {  
-    
-        super(sqlSessionFactory, executorType, exceptionTranslator);  
+        
+        super(sqlSessionFactory, executorType, exceptionTranslator); 
         notNull(sqlSessionFactory, "Property 'sqlSessionFactory' is required");
         notNull(executorType, "Property 'executorType' is required");
         this.sqlSessionFactory = sqlSessionFactory;
@@ -97,16 +97,14 @@ public class CustomSqlSessionTemplate extends SqlSessionTemplate {
      */
     @Override  
     public SqlSessionFactory getSqlSessionFactory() {  
-    
         SqlSessionFactory targetSqlSessionFactory = targetSqlSessionFactorys.get(CustomerContextHolder.getContextType());  
+        Assert.notNull(defaultTargetSqlSessionFactory, "Property 'defaultTargetSqlSessionFactory' are required");  
         if (targetSqlSessionFactory != null) {  
             return targetSqlSessionFactory;  
-        } else if (defaultTargetSqlSessionFactory != null) {  
-            return defaultTargetSqlSessionFactory;  
-        } else {  
-            Assert.notNull(targetSqlSessionFactorys, "Property 'targetSqlSessionFactorys' or 'defaultTargetSqlSessionFactory' are required");  
-            Assert.notNull(defaultTargetSqlSessionFactory, "Property 'defaultTargetSqlSessionFactory' or 'targetSqlSessionFactorys' are required");  
-        }  
+        } else if (this.defaultTargetSqlSessionFactory != null) {  
+            //System.err.println("获得targetSqlSessionFactory为空,使用默认的SqlSessionFactory:"+this.defaultTargetSqlSessionFactory.hashCode());
+            return this.defaultTargetSqlSessionFactory;  
+        }
         return this.sqlSessionFactory;
     }  
     public ExecutorType getExecutorType() {

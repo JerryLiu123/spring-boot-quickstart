@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.liu.springboot.quickstart.bean.DemoObj;
 import com.liu.springboot.quickstart.config.ConstantsConfig;
 import com.liu.springboot.quickstart.service.IMonitorService;
+import com.liu.springboot.quickstart.service.IVideoService;
 
 @Controller
 public class IndexController extends BaseController{
@@ -25,6 +26,8 @@ public class IndexController extends BaseController{
 	
 	@Autowired
 	private IMonitorService monitorService;
+	@Autowired
+	private IVideoService videoService;
 	
 	@RequestMapping(value="/index")
 	public String index(HttpServletRequest req,
@@ -39,6 +42,7 @@ public class IndexController extends BaseController{
 	    
 	    //se.invalidate();
 	    monitorService.getMonitorInfoBean();
+	    videoService.testException2();
 	    DemoObj demoObj = new DemoObj(333l, "WYF");
 	    dataMap.put("demoObj", demoObj);
 		return "index";
@@ -53,6 +57,12 @@ public class IndexController extends BaseController{
 	@RequestMapping(value="/json")
 	public Map<String, Object> getJson(){
 		Map<String, Object> value = new HashMap<String, Object>();
+	      try {
+	            videoService.testException();
+	        } catch (Exception e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	        }
 		value.put("123", "测试json");
 		value.put("456", null);
 		return value;

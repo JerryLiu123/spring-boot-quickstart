@@ -1,6 +1,8 @@
 package com.liu.springboot.quickstart.util;
 
 
+import java.util.Map;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -40,5 +42,10 @@ public class SpringUtil implements ApplicationContextAware {
     //通过name,以及Clazz返回指定的Bean
     public static <T> T getBean(String name,Class<T> clazz){
         return getApplicationContext().getBean(name, clazz);
+    }
+    
+    //通过Class获得Bean 返回一个map key为beanName value为Bean
+    public static <T> Map<String, T> getBeans(Class<T> clazz){
+        return getApplicationContext().getBeansOfType(clazz);
     }
 }

@@ -13,13 +13,13 @@ package com.liu.springboot.quickstart.util.dynamicdatasource;
  */  
 public abstract class CustomerContextHolder {  
        
-    private static final ThreadLocal<String> contextHolder = new ThreadLocal<String>();    
+    private static final ThreadLocal<DBEnum> contextHolder = new ThreadLocal<DBEnum>();    
        
-    public static void setContextType(String contextType) {    
+    public static void setContextType(DBEnum contextType) {    
         contextHolder.set(contextType);    
     }    
          
-    public static String getContextType() {    
+    public static DBEnum getContextType() {    
         return contextHolder.get();    
     }    
          

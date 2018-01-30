@@ -22,8 +22,8 @@ public class ConstantsConfig {
 	public static String desKey = "mykey";
 	
 	/**数据源名称**/
-	public static final String DATESOURCE1 = "dataMySQL1";
-	public static final String DATESOURCE2 = "dataMySQL2";
+	//public static final String DATESOURCE1 = "dataMySQL1";
+	//public static final String DATESOURCE2 = "dataMySQL2";
 	
 	
 	/**zookeeper 应用根目录**/

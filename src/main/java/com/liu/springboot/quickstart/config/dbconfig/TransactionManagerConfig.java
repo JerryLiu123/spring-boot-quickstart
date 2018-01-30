@@ -9,6 +9,7 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.jta.JtaTransactionManager;
+import org.springframework.transaction.support.TransactionTemplate;
 
 import com.atomikos.icatch.jta.UserTransactionImp;
 import com.atomikos.icatch.jta.UserTransactionManager;
@@ -32,7 +33,7 @@ public class TransactionManagerConfig {
 	@Bean(name = "atomikosTransactionManager", initMethod = "init", destroyMethod = "close")
 	public TransactionManager atomikosTransactionManager() throws Throwable {
 		UserTransactionManager userTransactionManager = new UserTransactionManager();
-		userTransactionManager.setForceShutdown(false);
+		userTransactionManager.setForceShutdown(true);
 		return userTransactionManager;
 	}
 

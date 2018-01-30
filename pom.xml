@@ -73,16 +73,17 @@
     <dependency>  
 		<groupId>mysql</groupId>  
 		<artifactId>mysql-connector-java</artifactId>  
+		<version>5.1.42</version>
     </dependency>  
 	<dependency>
 		<groupId>com.alibaba</groupId>
 		<artifactId>druid</artifactId>
-		<version>0.2.9</version>
+		<version>1.0.31</version>
 	</dependency>
 	<dependency>
 		<groupId>com.alibaba</groupId>
-		<artifactId>fastjson</artifactId>
-		<version>1.1.26</version>
+		<artifactId>druid-spring-boot-starter</artifactId>
+		<version>1.1.1</version>
 	</dependency>
     <!-- spring mysql 依赖结束 --> 
     <!-- jta事物开始 -->

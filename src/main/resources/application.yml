@@ -28,15 +28,15 @@ spring:
            url: jdbc:mysql://192.168.56.2:3306/classDB?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
            username: classuser
            password: ENC(xfcqz2HNCeY=)
-           driverClassName: com.mysql.jdbc.Driver
-           minPoolSize: 3
+           driverClassName: org.gjt.mm.mysql.Driver
+           minPoolSize: 5
            maxPoolSize: 25
            maxLifetime: 20000
            maxWaitTime: 60000
-           borrowConnectionTimeout: 30
-           loginTimeout: 30
-           maintenanceInterval: 60
-           test.maxIdleTime: 60
+           borrowConnectionTimeout: 300
+           loginTimeout: 300
+           maintenanceInterval: 600
+           maxIdleTime: 600
            testQuery: select 1
            mapperLocations: classpath:/com/liu/springboot/quickstart/mapper/db01mapper/*.xml
            baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml
@@ -45,15 +45,15 @@ spring:
            url: jdbc:mysql://192.168.56.2:3306/classDB2?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
            username: classuser
            password: ENC(xfcqz2HNCeY=)
-           driverClassName: com.mysql.jdbc.Driver
-           minPoolSize: 3
+           driverClassName: org.gjt.mm.mysql.Driver
+           minPoolSize: 5
            maxPoolSize: 25
            maxLifetime: 20000
            maxWaitTime: 60000
-           borrowConnectionTimeout: 30
-           loginTimeout: 30
-           maintenanceInterval: 60
-           test.maxIdleTime: 60
+           borrowConnectionTimeout: 300
+           loginTimeout: 300
+           maintenanceInterval: 600
+           maxIdleTime: 600
            testQuery: select 1
            mapperLocations: classpath:/com/liu/springboot/quickstart/mapper/db02mapper/*.xml
            baseMapperLocations: classpath:/com/liu/springboot/quickstart/mapper/basemapper/*.xml

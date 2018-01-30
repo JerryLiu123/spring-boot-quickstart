@@ -23,7 +23,7 @@ public class ApplicationStartListener implements ApplicationListener<ContextRefr
     public void onApplicationEvent(ContextRefreshedEvent event) {
         // TODO Auto-generated method stub
         System.out.println("=====spring boot 启动成功!!!====");
-        signInSer.run();
+        //signInSer.run();
     }
 
 }

@@ -12,8 +12,9 @@ public class DefaultEncryptor implements StringEncryptor {
     @Override
     public String decrypt(String arg0) {
         // TODO Auto-generated method stub
-        System.out.println("解密前报文为----"+arg0);
-        return DESUtils.getDecryptString(arg0);
+        String key = DESUtils.getDecryptString(arg0);
+        System.out.println("解密后报文为----"+key);
+        return key;
     }
 
     /**
