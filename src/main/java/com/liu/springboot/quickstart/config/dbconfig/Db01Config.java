@@ -93,70 +93,72 @@ public class Db01Config {
 // 		druidXADataSource.setUser(username);
 // 		druidXADataSource.setPinGlobalTxToPhysicalConnection(true);
  		
- 		DruidXADataSource druidXADataSource = new DruidXADataSource();
- 		druidXADataSource.setDriverClassName(driverClassName);
- 		druidXADataSource.setDbType("mysql");
- 		druidXADataSource.setDefaultAutoCommit(false);
- 		druidXADataSource.setUrl(url);
- 		druidXADataSource.setUsername(username);
- 		druidXADataSource.setPassword(password);
- 		druidXADataSource.setInitialSize(minPoolSize);
- 		druidXADataSource.setMinIdle(minPoolSize);
- 		druidXADataSource.setMaxActive(maxPoolSize);
- 		druidXADataSource.setMaxWait(maxWaitTime);
- 		druidXADataSource.setTestOnBorrow(false);
- 		druidXADataSource.setTestOnReturn(false);
- 		druidXADataSource.setTestWhileIdle(true);
- 		druidXADataSource.setTimeBetweenEvictionRunsMillis(200000);
- 		druidXADataSource.setValidationQuery(testQuery);
- 		druidXADataSource.setValidationQueryTimeout(2000);
- 		druidXADataSource.setRemoveAbandoned(true);
- 		druidXADataSource.setRemoveAbandonedTimeout(1800);
- 		druidXADataSource.setPoolPreparedStatements(false);
- 		druidXADataSource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolSize);
- 		druidXADataSource.setFilters("stat");
- 		druidXADataSource.setLogAbandoned(true);
+// 		DruidXADataSource druidXADataSource = new DruidXADataSource();
+// 		druidXADataSource.setName("db01DataSource");
+// 		druidXADataSource.setDriverClassName(driverClassName);
+// 		druidXADataSource.setDbType("mysql");
+// 		druidXADataSource.setDefaultAutoCommit(false);
+// 		druidXADataSource.setUrl(url);
+// 		druidXADataSource.setUsername(username);
+// 		druidXADataSource.setPassword(password);
+// 		druidXADataSource.setInitialSize(minPoolSize);
+// 		druidXADataSource.setMinIdle(minPoolSize);
+// 		druidXADataSource.setMaxActive(maxPoolSize);
+// 		druidXADataSource.setMaxWait(maxWaitTime);
+// 		druidXADataSource.setTestOnBorrow(false);
+// 		druidXADataSource.setTestOnReturn(false);
+// 		druidXADataSource.setTestWhileIdle(true);
+// 		druidXADataSource.setTimeBetweenEvictionRunsMillis(200000);//如果链接空闲时间大于该值得话，则检测链接可用性
+// 		druidXADataSource.setValidationQuery(testQuery);//用来检测连接是否有效的sql，要求是一个查询语句。 
+// 		druidXADataSource.setValidationQueryTimeout(2000);
+// 		druidXADataSource.setRemoveAbandoned(true);
+// 		druidXADataSource.setRemoveAbandonedTimeout(60);//删除空闲链接时间
+// 		//druidXADataSource.setPoolPreparedStatements(false);//链接池缓存,不用
+// 		//druidXADataSource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolSize);
+// 		druidXADataSource.setFilters("mergeStat");
+// 		druidXADataSource.setLogAbandoned(true);
+ 		//druidXADataSource.init();
  		
  		
  	    
-//        Properties xaProperties = new Properties();
-//        xaProperties.put("driverClassName", driverClassName);
-//        xaProperties.put("dbType", "mysql");
-//        xaProperties.put("defaultAutoCommit", "false");
-//        xaProperties.put("url", url);
-//        xaProperties.put("username", username);
-//        xaProperties.put("password", password);
-//        xaProperties.put("initialSize", minPoolSize);
-//        xaProperties.put("minIdle", minPoolSize);
-//        xaProperties.put("maxActive", maxPoolSize);
-//        xaProperties.put("maxWait", maxWaitTime);
-//        //xaProperties.setProperty("validationQuery", testQuery);
-//        xaProperties.put("testOnBorrow", "false");//在从池中取出链接时是否检查,设置为false，以加快取出速度
-//        xaProperties.put("testOnReturn", "false");
-//        xaProperties.put("testWhileIdle", "true");//设置定时检查链接可用性
-//        xaProperties.put("timeBetweenEvictionRunsMillis", Integer.valueOf(200000));//检查链接可用性间隔
-//        xaProperties.put("validationQuery", testQuery);
-//        xaProperties.put("validationQueryTimeout", Integer.valueOf(2000));
-//        xaProperties.put("removeAbandoned", "true");
-//        xaProperties.put("removeAbandonedTimeout", Integer.valueOf(300));
-//        xaProperties.put("poolPreparedStatements", "true"); 	    
-//        xaProperties.put("maxPoolPreparedStatementPerConnectionSize", maxPoolSize);
-//        xaProperties.put("filters", "stat");
+        Properties xaProperties = new Properties();
+        xaProperties.put("driverClassName", driverClassName);
+        xaProperties.put("dbType", "mysql");
+        xaProperties.put("defaultAutoCommit", false);
+        xaProperties.put("url", url);
+        xaProperties.put("username", username);
+        xaProperties.put("password", password);
+        xaProperties.put("initialSize", minPoolSize);
+        xaProperties.put("minIdle", minPoolSize);
+        xaProperties.put("maxActive", maxPoolSize);
+        xaProperties.put("maxWait", maxWaitTime);
+        //xaProperties.setProperty("validationQuery", testQuery);
+        xaProperties.put("testOnBorrow", false);//在从池中取出链接时是否检查,设置为false，以加快取出速度
+        xaProperties.put("testOnReturn", false);
+        xaProperties.put("testWhileIdle", true);//设置定时检查链接可用性
+        xaProperties.put("timeBetweenEvictionRunsMillis", 200000);//检查链接可用性间隔
+        xaProperties.put("validationQuery", testQuery);
+        xaProperties.put("validationQueryTimeout", 2000);
+        xaProperties.put("removeAbandoned", false);//这个属性配置的话会出现N多问题，但是不配置的话~~~又
+        //xaProperties.put("removeAbandonedTimeout", 300);
+        xaProperties.put("poolPreparedStatements", true); 	    
+        xaProperties.put("maxPoolPreparedStatementPerConnectionSize", maxPoolSize);
+        xaProperties.put("filters", "mergeStat");
         
  		AtomikosDataSourceBean xaDataSource = new AtomikosDataSourceBean();
- 		xaDataSource.setXaDataSource(druidXADataSource);
+ 		//xaDataSource.setXaDataSource(druidXADataSource);
  		xaDataSource.setXaDataSourceClassName("com.alibaba.druid.pool.xa.DruidXADataSource");//阿里的数据库连接
  		xaDataSource.setUniqueResourceName("db01DataSource");
 
- 		xaDataSource.setMinPoolSize(minPoolSize+5);
- 		xaDataSource.setMaxPoolSize(maxPoolSize+5);
- 		xaDataSource.setMaxLifetime(maxLifetime);
+ 		xaDataSource.setMinPoolSize(minPoolSize);
+ 		xaDataSource.setMaxPoolSize(maxPoolSize);
+ 		xaDataSource.setMaxLifetime(maxLifetime);//链接池回收时间，单位:秒
  		//xaDataSource.setBorrowConnectionTimeout(borrowConnectionTimeout);
- 		xaDataSource.setLoginTimeout(loginTimeout);
- 		xaDataSource.setMaintenanceInterval(maintenanceInterval);
- 		xaDataSource.setMaxIdleTime(maxIdleTime);
+ 		xaDataSource.setLoginTimeout(loginTimeout);//数据源登录时的最大超时时间，单位：秒
+ 		xaDataSource.setMaintenanceInterval(maintenanceInterval);//连接池的维护间隔，单位：秒，默认为60秒
+ 		xaDataSource.setMaxIdleTime(maxIdleTime);//多余的链接空闲时间，单位：秒，默认60秒
  		//xaDataSource.setTestQuery(testQuery);
- 		//xaDataSource.setXaProperties(xaProperties);
+ 		xaDataSource.setXaProperties(xaProperties);
  		try {
             xaDataSource.afterPropertiesSet();
         } catch (Exception e) {

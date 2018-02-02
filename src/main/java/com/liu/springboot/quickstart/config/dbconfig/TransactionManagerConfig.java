@@ -9,7 +9,6 @@ import org.springframework.context.annotation.DependsOn;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.jta.JtaTransactionManager;
-import org.springframework.transaction.support.TransactionTemplate;
 
 import com.atomikos.icatch.jta.UserTransactionImp;
 import com.atomikos.icatch.jta.UserTransactionManager;
@@ -25,7 +24,7 @@ public class TransactionManagerConfig {
 	
 	@Bean(name = "userTransaction")
 	public UserTransaction userTransaction() throws Throwable {
-		UserTransactionImp userTransactionImp = new UserTransactionImp();
+	    UserTransactionImp userTransactionImp = new UserTransactionImp();
 		userTransactionImp.setTransactionTimeout(10000);
 		return userTransactionImp;
 	}

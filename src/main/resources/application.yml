@@ -48,7 +48,7 @@ spring:
            driverClassName: org.gjt.mm.mysql.Driver
            minPoolSize: 5
            maxPoolSize: 25
-           maxLifetime: 20000
+           maxLifetime: 1800
            maxWaitTime: 60000
            borrowConnectionTimeout: 300
            loginTimeout: 300
