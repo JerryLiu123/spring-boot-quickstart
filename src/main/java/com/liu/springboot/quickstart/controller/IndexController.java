@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.liu.springboot.quickstart.bean.DemoObj;
 import com.liu.springboot.quickstart.config.ConstantsConfig;
 import com.liu.springboot.quickstart.service.IMonitorService;
@@ -39,7 +41,8 @@ public class IndexController extends BaseController{
 	    }else {
 	        logger.info(req.getSession().getAttribute("key"));
 	    }
-	    
+	    //使用分页插件
+	    //Thread.sleep(30000);
 	    //se.invalidate();
 	    monitorService.getMonitorInfoBean();
 	    videoService.testException2();
@@ -57,12 +60,15 @@ public class IndexController extends BaseController{
 	@RequestMapping(value="/json")
 	public Map<String, Object> getJson(){
 		Map<String, Object> value = new HashMap<String, Object>();
-	      try {
-	            videoService.testException();
-	        } catch (Exception e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
+		try {
+			//再一个server中的同一个sql语句执行多次，好像因为sql的缓存导致PageHelper只生效了一次~~~~
+			Page page = PageHelper.startPage(2, 2, true);
+		    videoService.testException();
+		    value.put("total", page.getTotal());
+		} catch (Exception e) {
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 		value.put("123", "测试json");
 		value.put("456", null);
 		return value;

@@ -133,8 +133,8 @@ public class Db02Config {
         xaProperties.put("timeBetweenEvictionRunsMillis", Integer.valueOf(200000));//检查链接可用性间隔
         xaProperties.put("validationQuery", testQuery);
         xaProperties.put("validationQueryTimeout", Integer.valueOf(2000));
-        xaProperties.put("removeAbandoned", true);
-        xaProperties.put("removeAbandonedTimeout", Integer.valueOf(300));
+        xaProperties.put("removeAbandoned", false);
+        //xaProperties.put("removeAbandonedTimeout", Integer.valueOf(300));
         xaProperties.put("poolPreparedStatements", true);       
         xaProperties.put("maxPoolPreparedStatementPerConnectionSize", maxPoolSize);
         xaProperties.put("filters", "mergeStat");
@@ -153,12 +153,12 @@ public class Db02Config {
         xaDataSource.setMaxIdleTime(maxIdleTime);
         //xaDataSource.setTestQuery(testQuery);
         xaDataSource.setXaProperties(xaProperties);
-//        try {
-//            xaDataSource.afterPropertiesSet();
-//        } catch (Exception e) {
-//            // TODO Auto-generated catch block
-//            logger.error("初始化数据连接错误!!!", e);
-//        }
+        try {
+            xaDataSource.afterPropertiesSet();
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            logger.error("初始化数据连接错误!!!", e);
+        }
         return xaDataSource;
 	}
 	

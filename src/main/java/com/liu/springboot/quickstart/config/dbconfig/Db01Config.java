@@ -80,6 +80,7 @@ public class Db01Config {
     
     /*
      * 为什么在查询的时候AtomikosDataSoureBean获得 connection为空？？？？
+     * 还有AtomikosDataSourceBean和DruidXADataSource都有连接池信息，经过测试之后发现使用的是AtomikosDataSourceBean的池信息，那DruidXADataSource的池信息有什么用？？？？
      */
  // 配置数据源
  	@Primary
@@ -131,7 +132,7 @@ public class Db01Config {
         xaProperties.put("initialSize", minPoolSize);
         xaProperties.put("minIdle", minPoolSize);
         xaProperties.put("maxActive", maxPoolSize);
-        xaProperties.put("maxWait", maxWaitTime);
+        xaProperties.put("maxWait", maxWaitTime);//获取连接等待的最大时间单位：毫秒
         //xaProperties.setProperty("validationQuery", testQuery);
         xaProperties.put("testOnBorrow", false);//在从池中取出链接时是否检查,设置为false，以加快取出速度
         xaProperties.put("testOnReturn", false);
@@ -139,11 +140,11 @@ public class Db01Config {
         xaProperties.put("timeBetweenEvictionRunsMillis", 200000);//检查链接可用性间隔
         xaProperties.put("validationQuery", testQuery);
         xaProperties.put("validationQueryTimeout", 2000);
-        xaProperties.put("removeAbandoned", false);//这个属性配置的话会出现N多问题，但是不配置的话~~~又
+        xaProperties.put("removeAbandoned", false);//对于长时间不使用的连接强行关闭,这个属性配置的话会出现N多问题，但是不配置的话~~~又
         //xaProperties.put("removeAbandonedTimeout", 300);
-        xaProperties.put("poolPreparedStatements", true); 	    
+        xaProperties.put("poolPreparedStatements", true);//是否缓存 PreparedStatements	    
         xaProperties.put("maxPoolPreparedStatementPerConnectionSize", maxPoolSize);
-        xaProperties.put("filters", "mergeStat");
+        xaProperties.put("filters", "stat");
         
  		AtomikosDataSourceBean xaDataSource = new AtomikosDataSourceBean();
  		//xaDataSource.setXaDataSource(druidXADataSource);
