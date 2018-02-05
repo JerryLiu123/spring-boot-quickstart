@@ -126,12 +126,11 @@ public class Db02Config {
         xaProperties.put("minIdle", minPoolSize);
         xaProperties.put("maxActive", maxPoolSize);
         xaProperties.put("maxWait", maxWaitTime);
-        //xaProperties.setProperty("validationQuery", testQuery);
         xaProperties.put("testOnBorrow", false);//在从池中取出链接时是否检查,设置为false，以加快取出速度
-        xaProperties.put("testOnReturn", false);
+        xaProperties.put("testOnReturn", false);//返回链接时是否检测,设置为false，以加快取出速度
         xaProperties.put("testWhileIdle", true);//设置定时检查链接可用性
         xaProperties.put("timeBetweenEvictionRunsMillis", Integer.valueOf(200000));//检查链接可用性间隔
-        xaProperties.put("validationQuery", testQuery);
+        xaProperties.put("validationQuery", testQuery);//检测链接所用的sql
         xaProperties.put("validationQueryTimeout", Integer.valueOf(2000));
         xaProperties.put("removeAbandoned", false);
         //xaProperties.put("removeAbandonedTimeout", Integer.valueOf(300));

@@ -119,8 +119,6 @@ public class Db01Config {
 // 		druidXADataSource.setFilters("mergeStat");
 // 		druidXADataSource.setLogAbandoned(true);
  		//druidXADataSource.init();
- 		
- 		
  	    
         Properties xaProperties = new Properties();
         xaProperties.put("driverClassName", driverClassName);
@@ -133,13 +131,12 @@ public class Db01Config {
         xaProperties.put("minIdle", minPoolSize);
         xaProperties.put("maxActive", maxPoolSize);
         xaProperties.put("maxWait", maxWaitTime);//获取连接等待的最大时间单位：毫秒
-        //xaProperties.setProperty("validationQuery", testQuery);
         xaProperties.put("testOnBorrow", false);//在从池中取出链接时是否检查,设置为false，以加快取出速度
-        xaProperties.put("testOnReturn", false);
+        xaProperties.put("testOnReturn", false);//返回链接时是否检测,设置为false，以加快取出速度
         xaProperties.put("testWhileIdle", true);//设置定时检查链接可用性
-        xaProperties.put("timeBetweenEvictionRunsMillis", 200000);//检查链接可用性间隔
-        xaProperties.put("validationQuery", testQuery);
-        xaProperties.put("validationQueryTimeout", 2000);
+        xaProperties.put("timeBetweenEvictionRunsMillis", Integer.valueOf(200000));//检查链接可用性间隔
+        xaProperties.put("validationQuery", testQuery);//检测链接所用的sql
+        xaProperties.put("validationQueryTimeout", Integer.valueOf(2000));
         xaProperties.put("removeAbandoned", false);//对于长时间不使用的连接强行关闭,这个属性配置的话会出现N多问题，但是不配置的话~~~又
         //xaProperties.put("removeAbandonedTimeout", 300);
         xaProperties.put("poolPreparedStatements", true);//是否缓存 PreparedStatements	    
@@ -153,11 +150,20 @@ public class Db01Config {
 
  		xaDataSource.setMinPoolSize(minPoolSize);
  		xaDataSource.setMaxPoolSize(maxPoolSize);
- 		xaDataSource.setMaxLifetime(maxLifetime);//链接池回收时间，单位:秒
- 		//xaDataSource.setBorrowConnectionTimeout(borrowConnectionTimeout);
- 		xaDataSource.setLoginTimeout(loginTimeout);//数据源登录时的最大超时时间，单位：秒
+ 		/*
+ 		 * 连接最大存活时间，超过这个且没有正在使用的连接将自动销毁,0无限制，1000 =1000s,
+ 		 * 对于一些会自动中断连接的数据库如mysql，可以设置这个参数，在达到这个时间的时候会自动关闭连接，下次数据库调用的时候就会新建
+ 		 */
+ 		xaDataSource.setMaxLifetime(maxLifetime);
+ 		xaDataSource.setBorrowConnectionTimeout(borrowConnectionTimeout);//获取连接失败重新获等待最大时间，在这个时间内如果有可用连接，将返回
+ 		xaDataSource.setLoginTimeout(loginTimeout);//最大可等待获取datasouce的时间，单位：秒
  		xaDataSource.setMaintenanceInterval(maintenanceInterval);//连接池的维护间隔，单位：秒，默认为60秒
- 		xaDataSource.setMaxIdleTime(maxIdleTime);//多余的链接空闲时间，单位：秒，默认60秒
+ 		xaDataSource.setMaxIdleTime(maxIdleTime);//多余的链接回收时间，单位：秒，默认60秒
+ 		/*
+ 		 * 最大获取数据时间，如果不设置这个值，Atomikos使用默认的5分钟，
+ 		 * 那么在处理大批量数据读取的时候，一旦超过5分钟，就会抛出类似 Resultset is close 的错误
+ 		 */
+ 		//xaDataSource.setReapTimeout(reapTimeout);
  		//xaDataSource.setTestQuery(testQuery);
  		xaDataSource.setXaProperties(xaProperties);
  		try {

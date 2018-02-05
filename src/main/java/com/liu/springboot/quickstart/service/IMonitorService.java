@@ -14,4 +14,6 @@ public interface IMonitorService {
      * @throws Exception
      */
     public MonitorInfoBean getMonitorInfoBean() throws Exception; 
+    
+    public MonitorInfoBean getMonitorInfoBean2() throws Exception; 
 }
