@@ -89,4 +89,4 @@ spring:
         keepAliveSeconds: 200
         threadNamePrefix: taskExecutor_
     aop: 
-        proxy-target-class: false
+        proxy-target-class: true
