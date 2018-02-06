@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.config.springconfig;
+package com.liu.springboot.quickstart.config.springconfig.bootaddon;
 
 import org.springframework.core.Ordered;
 

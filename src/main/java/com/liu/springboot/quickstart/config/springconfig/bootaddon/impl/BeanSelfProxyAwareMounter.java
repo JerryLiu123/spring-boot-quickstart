@@ -1,4 +1,4 @@
-package com.liu.springboot.quickstart.config.springconfig;
+package com.liu.springboot.quickstart.config.springconfig.bootaddon.impl;
 
 import java.util.Map;
 
@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import com.liu.springboot.quickstart.config.springconfig.bootaddon.ISystemBootAddon;
 import com.liu.springboot.quickstart.service.IBeanSelfProxyAware;
 import com.liu.springboot.quickstart.util.SpringUtil;
 

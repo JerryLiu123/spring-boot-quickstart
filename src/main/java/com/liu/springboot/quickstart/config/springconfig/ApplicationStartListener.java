@@ -11,6 +11,8 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.OrderComparator;
 import org.springframework.stereotype.Component;
 
+import com.liu.springboot.quickstart.config.springconfig.bootaddon.ISystemBootAddon;
+
 
 /**
  * 在spring初始化完成后执行
