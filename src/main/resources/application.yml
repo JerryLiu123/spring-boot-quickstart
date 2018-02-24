@@ -7,7 +7,7 @@ server:
 
 connection: 
     resources: /res
-    redsWorkSize: 7
+    redsWorkSize: 3
     serID: 1
     zkHosts: 192.168.56.2:2181
     applicationPath: 

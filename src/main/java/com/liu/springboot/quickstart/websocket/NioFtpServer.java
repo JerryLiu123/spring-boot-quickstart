@@ -23,7 +23,10 @@ public class NioFtpServer {
     //开启线程池
     private ExecutorService exec = Executors.newFixedThreadPool(10);
     private static final String ROOT_PATH="E:\\FtpDir\\";
-    
+    private boolean running = true;
+    /*
+     * 这样的话一个文件就是建立一个socket链接，怎么多个文件建立一个socket链接~~
+     */
     public void startServer() throws IOException, InterruptedException{
         Selector selector = Selector.open();
         //建立socket通道
@@ -36,44 +39,56 @@ public class NioFtpServer {
         //一个通道可以被注册到多个选择器上，但对每个选择器而言只能被注册一次。
         serverChannel.register(selector, SelectionKey.OP_ACCEPT);
         System.out.println("服务器已开启...");
-        while (true) {
-            int num = selector.select();
-            if (num == 0) continue;
-            Iterator<SelectionKey> it = selector.selectedKeys().iterator();
-            while (it.hasNext()) {
-                //在这里面是线性的
-                SelectionKey key = it.next();
-                if (key.isAcceptable()) {//连接成功状态，给客户端发送信息
-                    ServerSocketChannel serverChannel1 = (ServerSocketChannel) key.channel();
-                    SocketChannel socketChannel = serverChannel1.accept();
-                    if (socketChannel == null) continue;
-                    //读取客户端传过来的文件信息
-                    String fileName = readToClient(socketChannel);
-                    //设置通道为非阻塞,例如:read操作就不会堵住了,但是会成为线性的？
-                    socketChannel.configureBlocking(false);
-                    //标记为对Read事件感兴趣
-                    //将SocketChannel通道注册到选择器selector上,
-                    //也就是说选择器selector监听了通道SocketChannel的read操作和通道ServerSocketChannel的acceptable操作
-                    SelectionKey key1 = socketChannel.register(selector, SelectionKey.OP_READ);
-                    InetSocketAddress remoteAddress = (InetSocketAddress)socketChannel.getRemoteAddress();
-                    //File file = new File(remoteAddress.getHostName() + "_" + remoteAddress.getPort() + ".txt");
-                    //FileChannel fileChannel = new FileOutputStream(file).getChannel();
-                    String path = ROOT_PATH + remoteAddress.getHostName() + "_" + remoteAddress.getPort() + "_" + fileName;
-                    //使用多线程的时候注意，同一个文件要用一个FileChannel
-                    FileChannel flChannel = new RandomAccessFile(path, "rw").getChannel();
-                    fileMap.put(key1, flChannel);
-                    System.out.println(socketChannel.getRemoteAddress() + "连接成功...  FileName:"+fileName);
-                    writeToClient(socketChannel);
-                }else if (key.isReadable()){//接收数据
-                    //System.out.println("key:"+key.toString());
-                    //会多次执行，也就是说nio是面向缓存区的概念，当一个缓存的数据写入通道，选择器就会监听到通道已经是可读取的状态，所以就会运行该方法，开始读取数据
-                    //io socket 和nio socket的区别我认为在这里的时候io是一直在阻塞的发送，数据也就是同一个文件只会有一个线程在写入文件，
-                    //但是nio可以一个文件可以多个线程写入
-                    readData(key);
+        try {
+            while (running && !Thread.interrupted()) {
+                int num = selector.select();
+                if (num == 0) continue;
+                Iterator<SelectionKey> it = selector.selectedKeys().iterator();
+                while (it.hasNext()) {
+                    //在这里面是线性的
+                    SelectionKey key = it.next();
+                    if (key.isAcceptable()) {//连接成功状态，给客户端发送信息
+                        ServerSocketChannel serverChannel1 = (ServerSocketChannel) key.channel();
+                        SocketChannel socketChannel = serverChannel1.accept();
+                        if (socketChannel == null) continue;
+                        //读取客户端传过来的文件信息
+                        String fileName = readToClient(socketChannel);
+                        //设置通道为非阻塞,例如:read操作就不会堵住了,但是会成为线性的？
+                        socketChannel.configureBlocking(false);
+                        //标记为对Read事件感兴趣
+                        //将SocketChannel通道注册到选择器selector上,
+                        //也就是说选择器selector监听了通道SocketChannel的read操作和通道ServerSocketChannel的acceptable操作
+                        SelectionKey key1 = socketChannel.register(selector, SelectionKey.OP_READ);
+                        InetSocketAddress remoteAddress = (InetSocketAddress)socketChannel.getRemoteAddress();
+                        String path = ROOT_PATH + remoteAddress.getHostName() + "_" + remoteAddress.getPort() + "_" + fileName;
+                        //使用多线程的时候注意，同一个文件要用一个FileChannel
+                        FileChannel flChannel = new RandomAccessFile(path, "rw").getChannel();
+                        fileMap.put(key1, flChannel);
+                        System.out.println(socketChannel.getRemoteAddress() + "连接成功...  FileName:"+fileName);
+                        writeToClient(socketChannel);
+                    }else if (key.isReadable()){//接收数据
+                        //System.out.println("key:"+key.toString());
+                        //会多次执行，也就是说nio是面向缓存区的概念，当一个缓存的数据写入通道，选择器就会监听到通道已经是可读取的状态，所以就会运行该方法，开始读取数据
+                        //io socket 和nio socket的区别我认为在这里的时候io是一直在阻塞的发送，数据也就是同一个文件只会有一个线程在写入文件，
+                        //但是nio可以一个文件可以多个线程写入
+                        readData(key);
+                    }
+                    // NIO的特点只会累加，已选择的键的集合不会删除，ready集合会被清空
+                    // 只是临时删除已选择键集合，当该键代表的通道上再次有感兴趣的集合准备好之后，又会被select函数选中
+                    it.remove();
                 }
-                // NIO的特点只会累加，已选择的键的集合不会删除，ready集合会被清空
-                // 只是临时删除已选择键集合，当该键代表的通道上再次有感兴趣的集合准备好之后，又会被select函数选中
-                it.remove();
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }finally {
+            if(selector != null) {
+                //关闭选择器
+                selector.close();
+            }
+            if(serverChannel != null) {
+                //关闭socket端口
+                serverChannel.close();
             }
         }
     }
@@ -136,9 +151,11 @@ public class NioFtpServer {
                         fileChannel.close();
                         System.out.println("上传完毕"+key.toString());
                         //向客户端发送信息
-                        buffer.put((socketChannel.getRemoteAddress() + "上传成功").getBytes("utf-8"));
                         buffer.clear();
+                        buffer.put((socketChannel.getRemoteAddress() + "上传成功").getBytes("utf-8"));
+                        buffer.flip();
                         socketChannel.write(buffer);
+                        socketChannel.close();
                         // 只有调用cancel才会真正从已选择的键的集合里面移除，否则下次select的时候又能得到
                         // 一端close掉了，其对端仍然是可读的，读取得到EOF，返回-1
                         key.cancel(); 

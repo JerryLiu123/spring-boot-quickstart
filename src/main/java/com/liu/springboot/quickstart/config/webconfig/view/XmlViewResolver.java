@@ -18,7 +18,6 @@ public class XmlViewResolver implements ViewResolver {
     @Override
     public View resolveViewName(String viewName, Locale locale) throws Exception {
         // TODO Auto-generated method stub
-        System.out.println("===="+viewName);
         MarshallingView view = new MarshallingView();
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setClassesToBeBound(DemoObj.class);

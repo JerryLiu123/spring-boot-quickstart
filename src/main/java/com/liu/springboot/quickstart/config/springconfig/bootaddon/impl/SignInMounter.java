@@ -26,7 +26,7 @@ public class SignInMounter implements ISystemBootAddon {
     @Override
     public void onReady() {
         // TODO Auto-generated method stub
-        signInSer.run();
+        //signInSer.run();
     }
 
 }

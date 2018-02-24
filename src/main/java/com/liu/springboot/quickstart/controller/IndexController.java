@@ -2,17 +2,20 @@ package com.liu.springboot.quickstart.controller;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Callable;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.async.WebAsyncTask;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
@@ -51,6 +54,41 @@ public class IndexController extends BaseController{
 		return "index";
 	}
 	
+	@RequestMapping(value="/async/mode/{id}")
+	public WebAsyncTask asyncCon(@PathVariable(value="id")String id, Map<String, Object> dataMap) {
+	    System.out.println("/async/mode/"+id+"被调用 thread id is : " + Thread.currentThread().getId());
+	    Callable<ModelAndView> callable = new Callable<ModelAndView>() {
+	        public ModelAndView call() throws Exception {
+	            Thread.sleep(3000); //假设是一些长时间任务
+	            ModelAndView mav = new ModelAndView("index");
+	            mav.addObject("result", "执行成功");
+	            mav.addObject("id", id);
+	            System.out.println("执行成功 thread id is : " + Thread.currentThread().getName());
+	            return mav;
+	        }
+	    };
+	    return new WebAsyncTask(callable);	    
+	}
+	
+	
+	@ResponseBody
+    @RequestMapping(value="/async/json/{id}")
+    public WebAsyncTask asyncJson(@PathVariable(value="id")String id) {
+        System.out.println("/async/json/"+id+"被调用 thread id is : " + Thread.currentThread().getId());
+        Callable<Map<String, Object>> callable = new Callable<Map<String, Object>>() {
+            public Map<String, Object> call() throws Exception {
+                Map<String, Object> value = new HashMap<String, Object>();
+                Thread.sleep(3000); //假设是一些长时间任务
+                value.put("123", "测试json");
+                value.put("456", null);
+                value.put("789", id);
+                System.out.println("执行成功 thread id is : " + Thread.currentThread().getId());
+                return value;
+            }
+        };
+        return new WebAsyncTask(callable);      
+    }	
+	
 	@RequestMapping(value="toSocket", method = RequestMethod.GET)
 	public String toSocket() {
 	    return "socket";
@@ -61,6 +99,7 @@ public class IndexController extends BaseController{
 	public Map<String, Object> getJson(){
 		Map<String, Object> value = new HashMap<String, Object>();
 		try {
+		    Thread.sleep(10000); 
 			//再一个server中的同一个sql语句执行多次，好像因为sql的缓存导致PageHelper只生效了一次~~~~
 			Page page = PageHelper.startPage(2, 2, true);
 		    videoService.testException();

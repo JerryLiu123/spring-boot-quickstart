@@ -34,7 +34,6 @@ public class BaseController {
      */
     @ModelAttribute("urls")
     public ResourceUrlProvider urls() {
-        logger.info("-----获得静态资源MD5-----");
         return this.resourceUrlProvider;
     }
 }
