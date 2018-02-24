@@ -20,7 +20,6 @@ import org.springframework.web.servlet.ModelAndView;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.liu.springboot.quickstart.bean.DemoObj;
-import com.liu.springboot.quickstart.config.ConstantsConfig;
 import com.liu.springboot.quickstart.service.IMonitorService;
 import com.liu.springboot.quickstart.service.IVideoService;
 
@@ -55,7 +54,7 @@ public class IndexController extends BaseController{
 	}
 	
 	@RequestMapping(value="/async/mode/{id}")
-	public WebAsyncTask asyncCon(@PathVariable(value="id")String id, Map<String, Object> dataMap) {
+	public WebAsyncTask<ModelAndView> asyncCon(@PathVariable(value="id")String id, Map<String, Object> dataMap) {
 	    System.out.println("/async/mode/"+id+"被调用 thread id is : " + Thread.currentThread().getId());
 	    Callable<ModelAndView> callable = new Callable<ModelAndView>() {
 	        public ModelAndView call() throws Exception {
@@ -67,26 +66,40 @@ public class IndexController extends BaseController{
 	            return mav;
 	        }
 	    };
-	    return new WebAsyncTask(callable);	    
+	    
+	    return new WebAsyncTask<ModelAndView>(5000, callable);	    
 	}
 	
 	
 	@ResponseBody
     @RequestMapping(value="/async/json/{id}")
-    public WebAsyncTask asyncJson(@PathVariable(value="id")String id) {
-        System.out.println("/async/json/"+id+"被调用 thread id is : " + Thread.currentThread().getId());
+    public WebAsyncTask<Map<String, Object>> asyncJson(@PathVariable(value="id")String id) {
+	    Map<String, Object> value = new HashMap<String, Object>();
+	    logger.info("/async/json/"+id+"被调用 thread id is : " + Thread.currentThread().getId());
         Callable<Map<String, Object>> callable = new Callable<Map<String, Object>>() {
             public Map<String, Object> call() throws Exception {
-                Map<String, Object> value = new HashMap<String, Object>();
-                Thread.sleep(3000); //假设是一些长时间任务
+                Thread.sleep(7000); //假设是一些长时间任务
                 value.put("123", "测试json");
                 value.put("456", null);
                 value.put("789", id);
-                System.out.println("执行成功 thread id is : " + Thread.currentThread().getId());
+                logger.info("执行成功 thread id is : " + Thread.currentThread().getId());
                 return value;
             }
         };
-        return new WebAsyncTask(callable);      
+        
+        WebAsyncTask<Map<String, Object>> asyncTask = new WebAsyncTask<Map<String, Object>>(5000, callable);
+        asyncTask.onTimeout(new Callable<Map<String, Object>>() {
+
+            @Override
+            public Map<String, Object> call() throws Exception {
+                // TODO Auto-generated method stub
+                value.put("error", "执行超时");
+                logger.info("执行超时thread id is : " + Thread.currentThread().getId());
+                return value;
+            }
+            
+        });
+        return asyncTask;      
     }	
 	
 	@RequestMapping(value="toSocket", method = RequestMethod.GET)
